@@ -18,8 +18,8 @@
 
 ## 📬 ارتباط
 
-- تلگرام: [@idrisranjbar](https://t.me/edi_codes)
-- گیت‌هاب: [github.com/idrisranjbar](https://github.com/edrisranjbar)
+- تلگرام: [@edi_codes](https://t.me/edi_codes)
+- گیت‌هاب: [github.com/edrisranjbar](https://github.com/edrisranjbar)
 
 <div align="center">
 ساخته شده با ❤️ توسط <strong>ادریس رنجبر</strong>
