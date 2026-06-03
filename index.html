@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دوره صفر تا صد پایتون – مدرس: ادریس رنجبر</title>
+  <meta name="description" content="دوره رایگان آموزش برنامه‌نویسی پایتون از صفر تا صد با ادریس رنجبر. مناسب برای مبتدیان و علاقه‌مندان به برنامه‌نویسی."/>
+  <link rel="icon" href="assets/icons/python.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">🐍</div>
+    <span class="nav-logo-text">پایتون رنجبر</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">ویژگی‌ها</a></li>
+    <li><a href="#curriculum">سرفصل‌ها</a></li>
+    <li><a href="#instructor">مدرس</a></li>
+    <li><a href="#faq">سوالات</a></li>
+    <li><a href="#donate" class="nav-cta">حمایت مالی ❤️</a></li>
+  </ul>
+  <!-- hamburger placeholder -->
+  <button id="nav-toggle" style="display:none;background:none;border:none;color:var(--text-secondary);font-size:1.4rem;cursor:pointer;">☰</button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0.6;"></canvas>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="hero-content">
+    <!-- Text Side -->
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        ثبت‌نام رایگان – همین الان شروع کن
+      </div>
+
+      <h1 class="hero-title">
+        دوره جامع و کاربردی<br/>
+        برنامه نویسی <span class="python-word">Python</span><br>
+      </h1>
+
+      <p class="hero-subtitle">
+        دوره‌ای جامع و کاملاً رایگان که تو را از یک مبتدی تبدیل به یک برنامه‌نویس حرفه‌ای پایتون می‌کند. بدون پیش‌نیاز، فقط اشتیاق کافیه!
+      </p>
+
+      <div class="hero-actions">
+        <a href="#curriculum" class="btn-primary">
+          🚀 شروع یادگیری
+        </a>
+        <a href="#instructor" class="btn-secondary">
+          👤 آشنایی با مدرس
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-value" data-count="14" data-suffix="+">۰+</div>
+          <div class="stat-label">جلسه آموزشی</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-count="10" data-suffix="+">۰+</div>
+          <div class="stat-label">پروژه عملی</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value" data-count="895" data-suffix="+">۰+</div>
+          <div class="stat-label">دانشجو</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">رایگان</div>
+          <div class="stat-label">هزینه دوره</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Code Window Side -->
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="code-window-header">
+          <div class="window-dot window-dot-red"></div>
+          <div class="window-dot window-dot-yellow"></div>
+          <div class="window-dot window-dot-green"></div>
+          <span class="window-title">hello_python.py</span>
+        </div>
+        <div class="code-body">
+          <div class="code-line"><span class="line-num">1</span><span class="code-content"><span class="token-comment"># دوره پایتون رنجبر 🐍</span></span></div>
+          <div class="code-line"><span class="line-num">2</span><span class="code-content"></span></div>
+          <div class="code-line"><span class="line-num">3</span><span class="code-content"><span class="token-keyword">def</span> <span class="token-function">start_learning</span>(name):</span></div>
+          <div class="code-line"><span class="line-num">4</span><span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-string">"""شروع سفر کدنویسی"""</span></span></div>
+          <div class="code-line"><span class="line-num">5</span><span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;skills = [</span></div>
+          <div class="code-line"><span class="line-num">6</span><span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-string">"متغیرها"</span>, <span class="token-string">"توابع"</span>,</span></div>
+          <div class="code-line"><span class="line-num">7</span><span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-string">"کلاس‌ها"</span>, <span class="token-string">"API"</span></span></div>
+          <div class="code-line"><span class="line-num">8</span><span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;]</span></div>
+          <div class="code-line"><span class="line-num">9</span><span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-keyword">return</span> <span class="token-string">f"سلام {name}! 🎉"</span></span></div>
+          <div class="code-line"><span class="line-num">10</span><span class="code-content"></span></div>
+          <div class="code-line"><span class="line-num">11</span><span class="code-content"><span class="token-function">print</span>(start_learning(<span class="token-string">"دانشجو"</span>))</span></div>
+          <div class="code-line"><span class="line-num">12</span><span class="code-content"><span class="token-comment"># سلام دانشجو! 🎉</span></span></div>
+        </div>
+      </div>
+
+      <div class="floating-badge floating-badge-1">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="fb-icon">⭐</span>
+          <div>
+            <div class="fb-value">۴.۱ / ۵</div>
+            <div class="fb-text">امتیاز دانشجویان</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-badge floating-badge-2">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span class="fb-icon">🎓</span>
+          <div>
+            <div class="fb-value">۱۰۰% رایگان</div>
+            <div class="fb-text">بدون هزینه</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURES ─── -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">✦ چرا این دوره؟</div>
+      <h2 class="section-title">همه چیزی که <span>نیاز داری</span></h2>
+      <p class="section-desc">این دوره با رویکرد عملی و پروژه‌محور طراحی شده تا یادگیری پایتون را ساده، جذاب و ماندگار کند.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon feature-icon-blue">🎯</div>
+        <h3 class="feature-title">صفر تا صد</h3>
+        <p class="feature-desc">از اولین خط کد تا ساخت پروژه‌های واقعی. هیچ پیش‌نیازی لازم نیست — فقط بیا!</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon feature-icon-yellow">⚡</div>
+        <h3 class="feature-title">یادگیری عملی</h3>
+        <p class="feature-desc">هر مفهوم با مثال‌های واقعی و تمرین‌های عملی آموزش داده می‌شه تا کدنویسی زیر انگشتانت بره.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon feature-icon-green">💰</div>
+        <h3 class="feature-title">کاملاً رایگان</h3>
+        <p class="feature-desc">تمام محتوا رایگانه. اگه خواستی می‌تونی به مدرس کمک کنی تا دوره‌های بیشتری بسازه.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon feature-icon-purple">🏗️</div>
+        <h3 class="feature-title">پروژه‌های واقعی</h3>
+        <p class="feature-desc">بیش از ۵۰ پروژه از ساده تا پیشرفته برای تقویت مهارت و ساخت پورتفولیو حرفه‌ای.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon feature-icon-orange">🤖</div>
+        <h3 class="feature-title">هوش مصنوعی و داده</h3>
+        <p class="feature-desc">آشنایی با کتابخانه‌های NumPy، Pandas، Matplotlib و مقدمه‌ای بر یادگیری ماشین.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon feature-icon-cyan">🌐</div>
+        <h3 class="feature-title">توسعه وب با پایتون</h3>
+        <p class="feature-desc">ساخت API و وب‌اپلیکیشن با Flask و DRF، به‌علاوه آشنایی با دیتابیس‌ها.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CURRICULUM ─── -->
+<section class="curriculum" id="curriculum">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">✦ محتوای دوره</div>
+      <h2 class="section-title">سرفصل‌های <span>جامع</span></h2>
+      <p class="section-desc">مسیری ساختارمند و گام‌به‌گام که تو را از مبتدی به متخصص پایتون تبدیل می‌کند.</p>
+    </div>
+
+    <div class="curriculum-grid">
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۱</div>
+          <span class="chapter-title">مبانی پایتون</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">۱۴ جلسه</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>مقدمه</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>راه اندازی پیش نیازها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>نوشتن و اجرای اولین برنامه</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>نوشتن کامنت</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>تابع پرینت</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>متغیرها و انواع داده</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>عملگرهای ریاضی</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>عملگرهای مقایسه‌ای</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>گرفتن ورودی از کاربر</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>کار با رشته‌ها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>توابع رشته‌ها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>فرمت‌کردن رشته‌ها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>لیست‌ها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>تاپل‌ها</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۲</div>
+          <span class="chapter-title">ساختارهای داده</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>لیست‌ها و تاپل‌ها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>دیکشنری و مجموعه‌ها</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>List Comprehension</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>عملیات روی رشته‌ها</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۳</div>
+          <span class="chapter-title">توابع و ماژول‌ها</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>تعریف و فراخوانی توابع</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>آرگومان‌های پیش‌فرض و kwargs</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>Lambda و توابع درجا</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>ماژول‌ها و پکیج‌ها</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۴</div>
+          <span class="chapter-title">برنامه‌نویسی شیءگرا</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>کلاس‌ها و اشیاء</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>وراثت و چندریختی</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>متدهای ویژه</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>کپسوله‌سازی</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۵</div>
+          <span class="chapter-title">کار با فایل و استثناها</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>خواندن و نوشتن فایل</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>کار با JSON و CSV</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>مدیریت استثناها</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۶</div>
+          <span class="chapter-title">پروژه‌های عملی</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>ربات تلگرام با پایتون</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>وب‌اسکرپینگ با BeautifulSoup</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>API با FastAPI</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>پروژه پایانی</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۷</div>
+          <span class="chapter-title">کتابخانه‌های داده</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>NumPy – آرایه‌های عددی</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>Pandas – پردازش داده</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>Matplotlib – رسم نمودار</div>
+        </div>
+      </div>
+
+      <div class="chapter-card reveal">
+        <div class="chapter-header">
+          <div class="chapter-num">۸</div>
+          <span class="chapter-title">مقدمه هوش مصنوعی</span>
+          <div class="chapter-meta">
+            <span class="chapter-count">به زودی</span>
+            <span class="chapter-arrow">▶</span>
+          </div>
+        </div>
+        <div class="chapter-lessons">
+          <div class="lesson-item"><span class="lesson-icon">▶</span>مبانی یادگیری ماشین</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>Scikit-learn</div>
+          <div class="lesson-item"><span class="lesson-icon">▶</span>پروژه طبقه‌بندی داده</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── INSTRUCTOR ─── -->
+<section class="instructor" id="instructor">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">✦ مدرس دوره</div>
+      <h2 class="section-title">آشنایی با <span>ادریس رنجبر</span></h2>
+    </div>
+
+    <div class="instructor-card reveal">
+      <div class="instructor-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-inner">ا</div>
+        </div>
+      </div>
+      <div class="instructor-info">
+        <h3 class="instructor-name">ادریس رنجبر</h3>
+        <p class="instructor-role">توسعه دهنده بک اند، هم‌بنیانگذار آی‌تدبیر، مدرس</p>
+        <p class="instructor-bio">
+          ادریس رنجبر یک برنامه‌نویس و مدرس علاقه‌مند به اشتراک‌گذاری دانش است. با سال‌ها تجربه در توسعه نرم‌افزار و آموزش برنامه‌نویسی، این دوره را با هدف دسترسی همگانی و رایگان به آموزش باکیفیت پایتون طراحی کرده. هدفش اینه که هیچ کسی به خاطر هزینه از یادگیری محروم نشه.
+        </p>
+        <div class="instructor-skills">
+          <span class="skill-tag">Web Developer</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Laravel</span>
+          <span class="skill-tag">Linux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DONATION ─── -->
+<section class="donation" id="donate">
+  <div class="container">
+    <div class="donation-card reveal">
+      <span class="donation-icon">❤️</span>
+      <h2 class="donation-title">این دوره برات مفیده؟</h2>
+      <p class="donation-desc">
+        این دوره کاملاً رایگانه چون ادریس معتقده آموزش باید برای همه در دسترس باشه. اگه این محتوا برات مفید بوده، می‌تونی با یه کمک مالی کوچیک، ادامه تولید محتوای رایگان رو ممکن کنی.
+      </p>
+      <a href="https://edrisranjbar.ir/donation" target="_blank" rel="noopener" class="btn-donate">
+        ❤️ حمایت از مدرس
+      </a>
+      <p style="margin-top:20px;font-size:0.8rem;color:var(--text-muted);">
+        شماره کارت: 6219861910776086 <br>
+        Bitcoin: bc1qdwdpeqv0l8ala8tm46rtfeghuxl70een84npj3 <br>
+        Ethereum: 0x695CCF873d51E4C2dC1321b405C63BFE99c5a536 <br>
+        Solana: C2d9u9nY2hZfxsi5Fwz1o5VjGGQujWmxeqZ3upKvHBfD <br>
+        TON Coin: UQAjStDMoMUusqRAuQGZ0Qbc2Th45yUUMdKlbhQ_6aS2TWlD
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">✦ سوالات متداول</div>
+      <h2 class="section-title">جواب سوال‌های <span>رایج</span></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          آیا واقعاً این دوره رایگانه؟
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>بله، تمام محتوای این دوره کاملاً رایگان است. هیچ پرداختی لازم نیست. فقط در صورت تمایل و صرفاً داوطلبانه می‌توانید از مدرس حمایت مالی کنید.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          برای شروع چه پیش‌نیازی لازم دارم؟
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>هیچ پیش‌نیازی لازم نیست! این دوره از صفر شروع می‌شه. فقط کافیه یه کامپیوتر داشته باشی و اشتیاق یادگیری.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          مدت زمان یادگیری چقدره؟
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>دوره بیش از ۱۲۰ جلسه داره. با تمرین روزانه ۱–۲ ساعت، می‌تونی در ۳ تا ۶ ماه به سطح خوبی برسی. سرعت یادگیری کاملاً دست خودته.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          بعد از این دوره می‌تونم کار پیدا کنم؟
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>این دوره پایه‌های محکمی بهت می‌ده. با تکمیل پروژه‌های عملی و ساخت پورتفولیو، شانس خوبی برای ورود به بازار کار خواهی داشت.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          کجا می‌تونم سوال بپرسم؟
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>ادریس در بخش کامنت‌های هر ویدیو و همچنین از طریق کانال تلگرام پاسخگوی سوالات دانشجویانه.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          آیا مدرک یا گواهینامه‌ای دارم؟
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>در حال حاضر گواهینامه رسمی ارائه نمی‌شه، اما پروژه‌های عملی که می‌سازی بهترین نمونه‌کار برای نشون دادن مهارتته.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="footer-brand-name">
+        <span style="font-size:1.4rem;">🐍</span>
+        دوره پایتون رنجبر
+      </div>
+      <p class="footer-brand-desc">
+        آموزش رایگان برنامه‌نویسی پایتون از صفر تا صد با ادریس رنجبر. یادگیری برای همه، بدون هزینه.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">لینک‌ها</div>
+      <ul class="footer-links">
+        <li><a href="#features">ویژگی‌های دوره</a></li>
+        <li><a href="#curriculum">سرفصل‌ها</a></li>
+        <li><a href="#instructor">درباره مدرس</a></li>
+        <li><a href="#faq">سوالات متداول</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">ارتباط</div>
+      <ul class="footer-links">
+        <li><a href="https://t.me/edi_codes" target="_blank">کانال تلگرام</a></li>
+        <li><a href="https://linkedin.com/in/edris-ranjbar" target="_blank">لینکدین</a></li>
+        <li><a href="https://github.com/edrisranjbar" target="_blank">گیت‌هاب</a></li>
+        <li><a href="https://edrisranjbar.ir/donation" target="_blank">حمایت مالی</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 1405 — ادریس رنجبر · تمام حقوق محفوظ است</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
