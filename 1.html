@@ -115,14 +115,8 @@
           <!-- APARAT -->
           <div class="video-player-wrap" id="aparat-player">
             <div class="video-embed">
-              <!-- جایگزین کن: src="https://www.aparat.com/video/video/embed/videohash/HASH/vt/frame" -->
-              <iframe
-                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
-                title="آموزش متغیرها در پایتون - آپارات"
-                frameborder="0"
-                allowfullscreen
-              >
-              </iframe>
+                <iframe src="https://www.aparat.com/video/video/embed/videohash/hzhs404/vt/frame"     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                </iframe width="100%">
             </div>
             <div class="video-caption">
               🎥 برای تماشا در آپارات:
@@ -279,146 +273,6 @@
               خودش می‌فهمه.
             </p>
 
-            <div class="code-block">
-              <div class="code-block-header">
-                <span class="code-lang">Python</span>
-                <button class="copy-btn" onclick="copyCode(this)">کپی</button>
-              </div>
-              <pre><code><span class="token-comment"># تعریف متغیر</span>
-<span class="token-text">name</span> = <span class="token-string">"ادریس"</span>
-<span class="token-text">age</span> = <span class="token-number">28</span>
-<span class="token-text">is_student</span> = <span class="token-keyword">True</span>
-
-<span class="token-function">print</span>(name)   <span class="token-comment"># ادریس</span>
-<span class="token-function">print</span>(age)    <span class="token-comment"># 28</span></code></pre>
-            </div>
-
-            <h2>قوانین نام‌گذاری</h2>
-            <ul>
-              <li>می‌تونه شامل حرف، عدد و زیرخط (<code>_</code>) باشه</li>
-              <li>نباید با عدد شروع بشه</li>
-              <li>
-                حساس به بزرگی و کوچکی حروف است — <code>Name</code> و
-                <code>name</code> دو متغیر جداست
-              </li>
-              <li>
-                از کلمات کلیدی پایتون نباید استفاده کرد (مثل <code>if</code>،
-                <code>for</code>، <code>class</code>)
-              </li>
-            </ul>
-
-            <div class="info-box info-box-blue">
-              <span class="info-box-icon">💡</span>
-              <div>
-                <strong>نکته:</strong> در پایتون معمولاً از سبک
-                <code>snake_case</code> برای نام‌گذاری استفاده می‌شه — یعنی
-                کلمات با زیرخط از هم جدا می‌شن مثل <code>first_name</code> یا
-                <code>user_age</code>.
-              </div>
-            </div>
-
-            <h2>تابع type()</h2>
-            <p>
-              برای فهمیدن نوع یه متغیر می‌تونی از تابع
-              <code>type()</code> استفاده کنی:
-            </p>
-
-            <div class="code-block">
-              <div class="code-block-header">
-                <span class="code-lang">Python</span>
-                <button class="copy-btn" onclick="copyCode(this)">کپی</button>
-              </div>
-              <pre><code><span class="token-text">x</span> = <span class="token-number">10</span>
-<span class="token-text">y</span> = <span class="token-number">3.14</span>
-<span class="token-text">z</span> = <span class="token-string">"سلام"</span>
-
-<span class="token-function">print</span>(<span class="token-function">type</span>(x))  <span class="token-comment"># &lt;class 'int'&gt;</span>
-<span class="token-function">print</span>(<span class="token-function">type</span>(y))  <span class="token-comment"># &lt;class 'float'&gt;</span>
-<span class="token-function">print</span>(<span class="token-function">type</span>(z))  <span class="token-comment"># &lt;class 'str'&gt;</span></code></pre>
-            </div>
-
-            <div class="info-box info-box-yellow">
-              <span class="info-box-icon">⚠️</span>
-              <div>
-                <strong>توجه:</strong> اگه سعی کنی یه رشته و یه عدد رو با
-                <code>+</code> جمع کنی، پایتون خطا می‌ده. باید اول با
-                <code>str()</code> یا <code>int()</code> تبدیل نوع انجام بدی.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ─── EXERCISES ─── -->
-        <section class="lesson-section" id="exercises">
-          <div class="section-label">
-            <span class="section-label-icon">✏️</span>
-            تمرین‌ها
-          </div>
-
-          <div class="exercise-list">
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۱</div>
-                <span class="exercise-level exercise-easy">آسان</span>
-              </div>
-              <p class="exercise-desc">
-                سه متغیر به اسم‌های <code>first_name</code>،
-                <code>last_name</code> و <code>age</code> تعریف کن و اطلاعات
-                خودت رو توشون بذار. بعد همه‌شون رو با <code>print()</code> چاپ
-                کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code>first_name = <span class="token-string">"نام تو"</span>
-last_name = <span class="token-string">"فامیل تو"</span>
-age = <span class="token-number">۲۵</span>
-<span class="token-function">print</span>(first_name, last_name, age)</code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۲</div>
-                <span class="exercise-level exercise-medium">متوسط</span>
-              </div>
-              <p class="exercise-desc">
-                دو متغیر عددی تعریف کن و عملیات جمع، تفریق، ضرب و تقسیم رو روشون
-                انجام بده و نتیجه هر کدوم رو چاپ کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code>a = <span class="token-number">10</span>
-b = <span class="token-number">3</span>
-<span class="token-function">print</span>(a + b)   <span class="token-comment"># جمع</span>
-<span class="token-function">print</span>(a - b)   <span class="token-comment"># تفریق</span>
-<span class="token-function">print</span>(a * b)   <span class="token-comment"># ضرب</span>
-<span class="token-function">print</span>(a / b)   <span class="token-comment"># تقسیم</span></code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۳</div>
-                <span class="exercise-level exercise-hard">چالشی</span>
-              </div>
-              <p class="exercise-desc">
-                یه برنامه بنویس که سن کاربر رو بگیره و سال تولدش رو محاسبه و چاپ
-                کنه. از متغیر و <code>input()</code> استفاده کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code>age = <span class="token-function">int</span>(<span class="token-function">input</span>(<span class="token-string">"سن تو چنده؟ "</span>))
-birth_year = <span class="token-number">1403</span> - age
-<span class="token-function">print</span>(<span class="token-string">"سال تولد:"</span>, birth_year)</code></pre>
-                </div>
-              </details>
-            </div>
-          </div>
         </section>
 
         <!-- ─── REFERENCES ─── -->
@@ -435,67 +289,46 @@ birth_year = <span class="token-number">1403</span> - age
               rel="noopener"
               class="reference-card"
             >
-              <div class="ref-icon ref-icon-blue">📄</div>
+              <div class="ref-icon ref-icon-blue">🌐</div>
               <div class="ref-body">
                 <div class="ref-title">مستندات رسمی پایتون</div>
                 <div class="ref-desc">
                   توضیح کامل متغیرها و انواع داده در مستندات رسمی Python.org
                 </div>
               </div>
-              <span class="ref-arrow">↗</span>
             </a>
-
             <a
-              href="https://realpython.com/python-variables/"
+              href="https://www.w3schools.com/python/"
               target="_blank"
               rel="noopener"
               class="reference-card"
             >
-              <div class="ref-icon ref-icon-green">📝</div>
+              <div class="ref-icon ref-icon-blue">🌐</div>
               <div class="ref-body">
-                <div class="ref-title">Real Python — Variables in Python</div>
+                <div class="ref-title">وب سایت W3Schools</div>
                 <div class="ref-desc">
-                  مقاله جامع انگلیسی درباره متغیرها با مثال‌های متنوع
+                  آموزش ساده و تعاملی با امکان اجرای کد آنلاین
                 </div>
               </div>
-              <span class="ref-arrow">↗</span>
             </a>
-
-            <a
-              href="https://www.w3schools.com/python/python_variables.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-yellow">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python Variables</div>
-                <div class="ref-desc">
-                  آموزش ساده و تعاملی متغیرها با امکان اجرای کد آنلاین
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <!-- ADD MORE REFERENCES HERE -->
           </div>
         </section>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">
           <a href="#" class="lesson-nav-btn lesson-nav-prev disabled">
-            <span>←</span>
+            <span>&LeftAngleBracket;</span>
             <div>
               <div class="nav-btn-label">جلسه قبل</div>
               <div class="nav-btn-title">—</div>
             </div>
           </a>
           <a href="#" class="lesson-nav-btn lesson-nav-next">
+            <span>&RightAngleBracket;</span>
             <div style="text-align: right">
               <div class="nav-btn-label">جلسه بعد</div>
               <div class="nav-btn-title">انواع داده</div>
             </div>
-            <span>→</span>
           </a>
         </div>
       </main>
