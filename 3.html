@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوره صفر تا صد پایتون – مدرس: ادریس رنجبر</title>
+    <meta
+      name="description"
+      content="نوشتن و اجرای اولین برنامه پایتون — جلسه ۳ دوره صفر تا صد پایتون با ادریس رنجبر"
+    />
+    <link rel="icon" href="assets/icons/python.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/lesson.css" />
+  </head>
+  <body>
+    <!-- ─── NAV ─── -->
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">🐍</div>
+        <span class="nav-logo-text">دوره صفر تا صد پایتون</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#curriculum">سرفصل‌ها</a></li>
+        <li><a href="index.html#donate" class="nav-cta">حمایت مالی ❤️</a></li>
+      </ul>
+      <button
+        id="nav-toggle"
+        style="
+          display: none;
+          background: none;
+          border: none;
+          color: var(--text-secondary);
+          font-size: 1.4rem;
+          cursor: pointer;
+        "
+      >
+        ☰
+      </button>
+    </nav>
+
+    <!-- ─── LESSON LAYOUT ─── -->
+    <div class="lesson-layout" style="position: relative; z-index: 1">
+      <main class="lesson-main" data-lesson="3">
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+          <a href="index.html">خانه</a>
+          <span class="bc-sep">›</span>
+          <a href="index.html#curriculum">فصل ۱</a>
+          <span class="bc-sep">›</span>
+          <span>نوشتن و اجرای اولین برنامه</span>
+        </div>
+
+        <!-- LESSON HEADER -->
+        <div class="lesson-header">
+          <h1 class="lesson-title">
+            قسمت ۳: نوشتن و اجرای اولین برنامه پایتون
+          </h1>
+          <p class="lesson-lead">
+            پس از نصب و راه‌اندازی پیش‌نیازها، حالا زمان آن رسیده که آستین‌ها را
+            بالا بزنیم و اولین کدهای پایتون را بنویسیم. در این جلسه یاد می‌گیریم
+            چطور در VS Code یک پروژه بسازیم و اولین برنامه‌مان را اجرا کنیم.
+          </p>
+        </div>
+
+        <!-- ─── VIDEOS ─── -->
+        <section class="lesson-section" id="videos">
+          <div class="section-label">
+            <span class="section-label-icon">🎬</span>
+            ویدیوهای آموزشی
+          </div>
+
+          <div class="video-tabs">
+            <button class="video-tab active" data-target="youtube-player">
+              یوتیوب
+            </button>
+            <button class="video-tab" data-target="aparat-player">
+              آپارات
+            </button>
+          </div>
+
+          <!-- YOUTUBE -->
+          <div class="video-player-wrap active" id="youtube-player">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="آموزش پایتون ۲۰۲۶ - قسمت ۳: نوشتن و اجرای اولین برنامه"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              📺 برای تماشا در یوتیوب:
+              <a
+                href="https://youtube.com/watch?v=VIDEO_ID"
+                target="_blank"
+                rel="noopener"
+                >باز کردن در یوتیوب ↗</a
+              >
+            </div>
+          </div>
+
+          <!-- APARAT -->
+          <div class="video-player-wrap" id="aparat-player">
+            <div class="video-embed">
+              <iframe
+                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
+                title="آموزش پایتون - قسمت ۳: نوشتن و اجرای اولین برنامه"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              🎥 برای تماشا در آپارات:
+              <a
+                href="https://aparat.com/v/APARAT_HASH"
+                target="_blank"
+                rel="noopener"
+                >باز کردن در آپارات ↗</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── DESCRIPTION ─── -->
+        <section class="lesson-section" id="description">
+          <div class="section-label">
+            <span class="section-label-icon">📖</span>
+            توضیحات جلسه
+          </div>
+
+          <div class="lesson-content">
+            <section>
+              <h2>ایجاد محیط کاری و ساخت اولین فایل پایتون</h2>
+              <p>برای شروع، ابتدا باید محیط کاری را در VS Code آماده کنیم:</p>
+              <ol>
+                <li>
+                  <strong>باز کردن VS Code:</strong> برنامه‌ای که در جلسه قبل
+                  نصب کردیم را باز کنید.
+                </li>
+                <li>
+                  <strong>ایجاد و باز کردن پوشه پروژه:</strong> روی دکمه
+                  <code>Open Folder</code> کلیک کنید یا از منوی File گزینه Open
+                  Folder را انتخاب کنید. یک پوشه جدید با نامی انگلیسی مثل
+                  <code>codes</code> یا <code>python-course</code> بسازید و آن
+                  را باز کنید. انتخاب نام انگلیسی برای پوشه‌ها از بروز خطاهای
+                  احتمالی در آینده جلوگیری می‌کند.
+                </li>
+                <li>
+                  <strong>ساخت فایل پایتون:</strong> در پنل سمت چپ روی فضای خالی
+                  کلیک راست کرده و گزینه <code>New File</code> را انتخاب کنید.
+                  نام فایل را وارد کنید، مثلاً <code>1.py</code> یا
+                  <code>hello.py</code>. پسوند فایل حتماً باید
+                  <strong>.py</strong> باشد تا سیستم آن را به عنوان کد پایتون
+                  بشناسد.
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h2>آشنایی با محیط VS Code</h2>
+              <p>
+                محیط این نرم‌افزار از سه بخش اصلی تشکیل شده که هر روز باهاشون
+                سروکار داری:
+              </p>
+              <ul>
+                <li>
+                  <strong>پنل سمت چپ:</strong> لیست فایل‌ها و پوشه‌های پروژه را
+                  نمایش می‌دهد.
+                </li>
+                <li>
+                  <strong>پنل وسط (ویرایشگر کد):</strong> فضای اصلی کدنویسی است.
+                </li>
+                <li>
+                  <strong>پنل پایین (ترمینال):</strong> خروجی و نتایج اجرای کدها
+                  اینجا نمایش داده می‌شود. اگر نمی‌بینیش از منوی
+                  <code>View</code> گزینه <code>Terminal</code> را انتخاب کن.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>نوشتن برنامه «سلام دنیا» (Hello World)</h2>
+              <p>
+                در دنیای برنامه‌نویسی رسم بر این است که اولین برنامه چاپ عبارت
+                «سلام دنیا» باشد. این کار نمادی از ورود به یک دنیای جدید است.
+              </p>
+              <p>در ویرایشگر کد این دستور را بنویس:</p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Python</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code><span class="token-function">print</span>(<span class="token-string">"Hello World"</span>)
+
+<span class="token-comment"># یا به فارسی:</span>
+<span class="token-function">print</span>(<span class="token-string">"سلام دنیا"</span>)</code></pre>
+              </div>
+
+              <div class="info-box info-box-blue">
+                <span class="info-box-icon">💡</span>
+                <div>
+                  <strong>دستور print چیست؟</strong> کلمه
+                  <code>print</code> یعنی نمایش یک مقدار روی صفحه — هیچ ارتباطی
+                  با دستگاه پرینتر فیزیکی ندارد! هر متنی که بخواهی به کاربر نشان
+                  بدهی را باید داخل پرانتز و علامت نقل‌قول قرار بدهی.
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>روش‌های اجرای کدهای پایتون</h2>
+              <p>پس از نوشتن کد، دو روش برای اجرا وجود دارد:</p>
+              <ul>
+                <li>
+                  <strong>روش اول — دکمه Run:</strong> در گوشه بالا سمت راست VS
+                  Code یک دکمه شبیه به دکمه پخش (Play) وجود دارد. با کلیک روی آن
+                  کد اجرا شده و خروجی در ترمینال پایین نمایش داده می‌شود.
+                </li>
+                <li>
+                  <strong>روش دوم — ترمینال:</strong> در پنل ترمینال دستور
+                  <code>python 1.py</code> را تایپ کن و Enter بزن. به جای
+                  <code>1.py</code> نام فایل خودت را بنویس. این روش در محیط‌های
+                  حرفه‌ای کاربرد زیادی دارد.
+                </li>
+              </ul>
+
+              <div class="info-box info-box-yellow">
+                <span class="info-box-icon">⚠️</span>
+                <div>
+                  اگر هنگام اجرا با خطای
+                  <code>python: command not found</code> مواجه شدی، از دستور
+                  <code>python3 1.py</code> استفاده کن — مخصوصاً روی مک و
+                  لینوکس.
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>نتیجه‌گیری</h2>
+              <p>
+                به شما تبریک می‌گویم! اولین کدهای پایتون را نوشتی و اجرا کردی.
+                در این جلسه با محیط VS Code، ساخت فایل‌های .py، مفهوم دستور
+                print و نحوه اجرای کدها آشنا شدیم. در جلسات آینده با متغیرها و
+                انواع داده‌ها کار خواهیم کرد — حتماً این مراحل را روی سیستم خودت
+                تمرین کن.
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <!-- ─── REFERENCES ─── -->
+        <section class="lesson-section" id="references">
+          <div class="section-label">
+            <span class="section-label-icon">📎</span>
+            منابع و مطالعه بیشتر
+          </div>
+
+          <div class="reference-list">
+            <a
+              href="https://docs.python.org/3/library/functions.html#print"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">مستندات رسمی پایتون — تابع print</div>
+                <div class="ref-desc">
+                  توضیح کامل تابع print و تمام پارامترهای آن در Python.org
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://code.visualstudio.com/docs/python/python-tutorial"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">VS Code — راهنمای شروع با پایتون</div>
+                <div class="ref-desc">
+                  آموزش رسمی VS Code برای راه‌اندازی و اجرای پروژه‌های پایتون
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://www.w3schools.com/python/ref_func_print.asp"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">W3Schools — Python print()</div>
+                <div class="ref-desc">
+                  آموزش تعاملی تابع print با مثال‌های ساده و قابل اجرا در مرورگر
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ─── NAVIGATION ─── -->
+        <div class="lesson-nav-btns">
+          <a href="2.html" class="lesson-nav-btn lesson-nav-prev">
+            <span>‹</span>
+            <div>
+              <div class="nav-btn-label">جلسه قبل</div>
+              <div class="nav-btn-title">راه‌اندازی پیش‌نیازها</div>
+            </div>
+          </a>
+          <a href="4.html" class="lesson-nav-btn lesson-nav-next">
+            <div style="text-align: right">
+              <div class="nav-btn-label">جلسه بعد</div>
+              <div class="nav-btn-title">نوشتن کامنت</div>
+            </div>
+            <span>›</span>
+          </a>
+        </div>
+      </main>
+    </div>
+    <!-- end lesson-layout -->
+
+    <script src="assets/js/lesson.js"></script>
+  </body>
+</html>
