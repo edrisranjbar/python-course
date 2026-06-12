@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوره صفر تا صد پایتون – مدرس: ادریس رنجبر</title>
+    <meta
+      name="description"
+      content="آموزش دیکشنری (Dictionary) در پایتون — جلسه ۱۶ دوره صفر تا صد پایتون با ادریس رنجبر"
+    />
+    <link rel="icon" href="assets/icons/python.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/lesson.css" />
+  </head>
+  <body>
+    <!-- ─── NAV ─── -->
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">🐍</div>
+        <span class="nav-logo-text">دوره صفر تا صد پایتون</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#curriculum">سرفصل‌ها</a></li>
+        <li><a href="index.html#donate" class="nav-cta">حمایت مالی ❤️</a></li>
+      </ul>
+      <button
+        id="nav-toggle"
+        style="
+          display: none;
+          background: none;
+          border: none;
+          color: var(--text-secondary);
+          font-size: 1.4rem;
+          cursor: pointer;
+        "
+      >
+        ☰
+      </button>
+    </nav>
+
+    <!-- ─── LESSON LAYOUT ─── -->
+    <div class="lesson-layout" style="position: relative; z-index: 1">
+      <!-- ─── MAIN CONTENT ─── -->
+      <main class="lesson-main" data-lesson="16">
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+          <a href="index.html">خانه</a>
+          <span class="bc-sep">›</span>
+          <a href="index.html#curriculum">فصل ۱</a>
+          <span class="bc-sep">›</span>
+          <span>دیکشنری (Dictionary)</span>
+        </div>
+
+        <!-- LESSON HEADER -->
+        <div class="lesson-header">
+          <h1 class="lesson-title">دیکشنری در پایتون (Dictionary)</h1>
+          <p class="lesson-lead">
+            دیکشنری یکی از پرکاربردترین ساختارهای داده در پایتونه. به جای ذخیره
+            مقادیر با ایندکس عددی، در دیکشنری هر مقدار یک
+            <strong>کلید (Key)</strong> دلخواه داره. فکر کن مثل یه دفترچه تلفن:
+            اسم شخص → شماره تلفن. در این جلسه قدم به قدم و با ۳ مثال کامل یادش
+            می‌گیریم.
+          </p>
+        </div>
+
+        <!-- ─── VIDEOS ─── -->
+        <section class="lesson-section" id="videos">
+          <div class="section-label">
+            <span class="section-label-icon">🎬</span>
+            ویدیوهای آموزشی
+          </div>
+
+          <div class="video-tabs">
+            <button class="video-tab active" data-target="youtube-player">
+              یوتیوب
+            </button>
+            <button class="video-tab" data-target="aparat-player">
+              آپارات
+            </button>
+          </div>
+
+          <!-- YOUTUBE -->
+          <div class="video-player-wrap active" id="youtube-player">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="آموزش دیکشنری در پایتون - جلسه ۱۶"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              📺 برای تماشا در یوتیوب:
+              <a
+                href="https://youtube.com/watch?v=VIDEO_ID"
+                target="_blank"
+                rel="noopener"
+                >باز کردن در یوتیوب ↗</a
+              >
+            </div>
+          </div>
+
+          <!-- APARAT -->
+          <div class="video-player-wrap" id="aparat-player">
+            <div class="video-embed">
+              <iframe
+                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
+                title="آموزش دیکشنری در پایتون - آپارات"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              🎥 برای تماشا در آپارات:
+              <a
+                href="https://aparat.com/v/APARAT_HASH"
+                target="_blank"
+                rel="noopener"
+                >باز کردن در آپارات ↗</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── DESCRIPTION ─── -->
+        <section class="lesson-section" id="description">
+          <div class="section-label">
+            <span class="section-label-icon">📖</span>
+            توضیحات جلسه
+          </div>
+
+          <div class="lesson-content">
+            <!-- ── CONCEPT ── -->
+            <section>
+              <h2>دیکشنری چیست؟</h2>
+              <p>
+                دیکشنری یا <code>dict</code> مجموعه‌ای از جفت‌های
+                <strong>کلید: مقدار</strong> است. هر کلید مثل یک برچسب عمل
+                می‌کند که مقدار مشخصی پشتش قرار دارد.
+              </p>
+              <ul>
+                <li>
+                  <strong>کلیدها یکتا هستند</strong> — نمی‌توان دو کلید یکسان
+                  داشت
+                </li>
+                <li>
+                  <strong>مقادیر می‌توانند هر نوعی باشند</strong> — عدد، رشته،
+                  لیست، حتی دیکشنری دیگر
+                </li>
+                <li>
+                  <strong>ترتیب حفظ می‌شود</strong> — از پایتون ۳.۷ به بعد
+                </li>
+                <li>
+                  <strong>تغییرپذیر هستند</strong> — می‌توان اضافه، حذف و ویرایش
+                  کرد
+                </li>
+              </ul>
+
+              <div class="info-box info-box-blue">
+                <span class="info-box-icon">💡</span>
+                <div>
+                  <strong>تشبیه ساده:</strong> دیکشنری مثل یک دفترچه تلفن است.
+                  به جای اینکه بگویی «نفر سوم»، می‌گویی «شماره علی» و مستقیم
+                  جواب می‌گیری.
+                </div>
+              </div>
+            </section>
+
+            <!-- ── EXAMPLE 1 ── -->
+            <section>
+              <h2>مثال اول — ساخت و دسترسی به دیکشنری</h2>
+              <p>
+                ساده‌ترین کار: ساخت یک دیکشنری و خواندن مقادیر از آن. دیکشنری را
+                با آکولاد <code>{}</code> می‌سازیم و کلید و مقدار را با
+                <code>:</code> از هم جدا می‌کنیم.
+              </p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Python</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code><span class="token-comment"># ساخت یک دیکشنری برای اطلاعات یک دانش‌آموز</span>
+<span class="token-text">student</span> = {
+    <span class="token-string">"name"</span>: <span class="token-string">"علی رضایی"</span>,
+    <span class="token-string">"age"</span>: <span class="token-number">20</span>,
+    <span class="token-string">"grade"</span>: <span class="token-number">17.5</span>,
+    <span class="token-string">"passed"</span>: <span class="token-keyword">True</span>
+}
+
+<span class="token-comment"># دسترسی با کلید — داخل کروشه</span>
+<span class="token-function">print</span>(student[<span class="token-string">"name"</span>])    <span class="token-comment"># علی رضایی</span>
+<span class="token-function">print</span>(student[<span class="token-string">"grade"</span>])   <span class="token-comment"># 17.5</span>
+
+<span class="token-comment"># دسترسی با .get() — اگه کلید نباشد None برمی‌گرداند</span>
+<span class="token-function">print</span>(student.<span class="token-function">get</span>(<span class="token-string">"email"</span>))            <span class="token-comment"># None</span>
+<span class="token-function">print</span>(student.<span class="token-function">get</span>(<span class="token-string">"email"</span>, <span class="token-string">"ندارد"</span>))  <span class="token-comment"># ندارد</span>
+
+<span class="token-comment"># تعداد کلیدها</span>
+<span class="token-function">print</span>(<span class="token-function">len</span>(student))  <span class="token-comment"># 4</span></code></pre>
+              </div>
+
+              <div class="info-box info-box-yellow">
+                <span class="info-box-icon">⚠️</span>
+                <div>
+                  <strong>تفاوت <code>[]</code> و <code>.get()</code>:</strong>
+                  اگر کلید وجود نداشته باشد، <code>student["email"]</code> خطای
+                  <code>KeyError</code> می‌دهد. اما
+                  <code>student.get("email")</code> بدون خطا
+                  <code>None</code> برمی‌گرداند. در کدهای واقعی بیشتر از
+                  <code>.get()</code> استفاده کن.
+                </div>
+              </div>
+            </section>
+
+            <!-- ── EXAMPLE 2 ── -->
+            <section>
+              <h2>مثال دوم — اضافه کردن، ویرایش و حذف</h2>
+              <p>
+                دیکشنری تغییرپذیر است. می‌توانی بعد از ساخت، مقادیر جدید اضافه
+                کنی، موجودی‌ها را ویرایش کنی یا کلیدی را حذف کنی.
+              </p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Python</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code><span class="token-text">product</span> = {
+    <span class="token-string">"name"</span>: <span class="token-string">"لپ‌تاپ"</span>,
+    <span class="token-string">"price"</span>: <span class="token-number">35_000_000</span>,
+    <span class="token-string">"stock"</span>: <span class="token-number">10</span>
+}
+
+<span class="token-comment"># اضافه کردن کلید جدید</span>
+product[<span class="token-string">"brand"</span>] = <span class="token-string">"Asus"</span>
+<span class="token-function">print</span>(product)
+
+<span class="token-comment"># ویرایش مقدار موجود</span>
+product[<span class="token-string">"price"</span>] = <span class="token-number">32_000_000</span>   <span class="token-comment"># تخفیف</span>
+product[<span class="token-string">"stock"</span>] -= <span class="token-number">1</span>            <span class="token-comment"># یکی فروخته شد</span>
+
+<span class="token-comment"># حذف یک کلید با del</span>
+<span class="token-keyword">del</span> product[<span class="token-string">"brand"</span>]
+
+<span class="token-comment"># حذف و گرفتن مقدار با pop()</span>
+<span class="token-text">old_price</span> = product.<span class="token-function">pop</span>(<span class="token-string">"price"</span>)
+<span class="token-function">print</span>(<span class="token-string">"قیمت قبلی:"</span>, old_price)  <span class="token-comment"># 32000000</span>
+<span class="token-function">print</span>(product)
+
+<span class="token-comment"># بررسی وجود کلید</span>
+<span class="token-function">print</span>(<span class="token-string">"name"</span> <span class="token-keyword">in</span> product)   <span class="token-comment"># True</span>
+<span class="token-function">print</span>(<span class="token-string">"price"</span> <span class="token-keyword">in</span> product)  <span class="token-comment"># False — حذف شد</span></code></pre>
+              </div>
+            </section>
+
+            <!-- ── EXAMPLE 3 ── -->
+            <section>
+              <h2>مثال سوم — حلقه زدن و متدهای مهم</h2>
+              <p>
+                یکی از کارهای خیلی رایج، حلقه زدن روی دیکشنری برای پردازش تمام
+                داده‌هاست. سه راه اصلی داریم:
+              </p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Python</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code><span class="token-text">scores</span> = {
+    <span class="token-string">"علی"</span>: <span class="token-number">18</span>,
+    <span class="token-string">"سارا"</span>: <span class="token-number">20</span>,
+    <span class="token-string">"رضا"</span>: <span class="token-number">15</span>,
+    <span class="token-string">"مینا"</span>: <span class="token-number">19</span>
+}
+
+<span class="token-comment"># ۱. فقط کلیدها</span>
+<span class="token-keyword">for</span> name <span class="token-keyword">in</span> scores.<span class="token-function">keys</span>():
+    <span class="token-function">print</span>(name)
+
+<span class="token-comment"># ۲. فقط مقادیر</span>
+<span class="token-keyword">for</span> score <span class="token-keyword">in</span> scores.<span class="token-function">values</span>():
+    <span class="token-function">print</span>(score)
+
+<span class="token-comment"># ۳. هر دو با هم — رایج‌ترین روش</span>
+<span class="token-keyword">for</span> name, score <span class="token-keyword">in</span> scores.<span class="token-function">items</span>():
+    <span class="token-function">print</span>(<span class="token-string">f"{name}: {score}"</span>)
+
+<span class="token-comment"># پیدا کردن بالاترین نمره</span>
+<span class="token-text">best</span> = <span class="token-function">max</span>(scores, key=scores.get)
+<span class="token-function">print</span>(<span class="token-string">f"نفر اول: {best} با نمره {scores[best]}"</span>)
+<span class="token-comment"># نفر اول: سارا با نمره 20</span></code></pre>
+              </div>
+
+              <div class="info-box info-box-blue">
+                <span class="info-box-icon">💡</span>
+                <div>
+                  <strong>نکته:</strong> در اکثر موارد واقعی از
+                  <code>.items()</code> استفاده می‌کنی چون هم کلید هم مقدار لازم
+                  داری. این الگو را حفظ کن — خیلی به‌کارت می‌آید.
+                </div>
+              </div>
+            </section>
+
+            <!-- ── NESTED DICT ── -->
+            <section>
+              <h2>دیکشنری تودرتو (Nested Dictionary)</h2>
+              <p>
+                مقدار یک کلید می‌تواند خودش یک دیکشنری دیگر باشد. این برای
+                نگه‌داری اطلاعات پیچیده‌تر خیلی مفید است:
+              </p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Python</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code><span class="token-text">users</span> = {
+    <span class="token-string">"u001"</span>: {
+        <span class="token-string">"name"</span>: <span class="token-string">"علی"</span>,
+        <span class="token-string">"age"</span>: <span class="token-number">25</span>,
+        <span class="token-string">"city"</span>: <span class="token-string">"تهران"</span>
+    },
+    <span class="token-string">"u002"</span>: {
+        <span class="token-string">"name"</span>: <span class="token-string">"سارا"</span>,
+        <span class="token-string">"age"</span>: <span class="token-number">30</span>,
+        <span class="token-string">"city"</span>: <span class="token-string">"اصفهان"</span>
+    }
+}
+
+<span class="token-comment"># دسترسی به داده‌های تودرتو</span>
+<span class="token-function">print</span>(users[<span class="token-string">"u001"</span>][<span class="token-string">"name"</span>])  <span class="token-comment"># علی</span>
+<span class="token-function">print</span>(users[<span class="token-string">"u002"</span>][<span class="token-string">"city"</span>])  <span class="token-comment"># اصفهان</span>
+
+<span class="token-comment"># نمایش همه کاربران</span>
+<span class="token-keyword">for</span> user_id, info <span class="token-keyword">in</span> users.<span class="token-function">items</span>():
+    <span class="token-function">print</span>(<span class="token-string">f"{user_id}: {info['name']} از {info['city']}"</span>)</code></pre>
+              </div>
+
+              <div class="info-box info-box-green">
+                <span class="info-box-icon">✅</span>
+                <div>
+                  <strong>کاربرد واقعی:</strong> وقتی از API داده دریافت می‌کنی
+                  (مثل اطلاعات کاربر از سرور)، معمولاً به شکل یک دیکشنری تودرتو
+                  می‌آید. یادگیری این الگو در کار با API‌ها ضروری است.
+                </div>
+              </div>
+            </section>
+
+            <!-- ── QUICK REF ── -->
+            <section>
+              <h2>جدول متدهای مهم</h2>
+              <p>یک مرور سریع از متدهایی که بیشتر استفاده می‌کنی:</p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Python</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code><span class="token-text">d</span> = {<span class="token-string">"a"</span>: <span class="token-number">1</span>, <span class="token-string">"b"</span>: <span class="token-number">2</span>}
+
+d.<span class="token-function">get</span>(<span class="token-string">"a"</span>)           <span class="token-comment"># 1  — دسترسی امن</span>
+d.<span class="token-function">keys</span>()            <span class="token-comment"># dict_keys(['a', 'b'])</span>
+d.<span class="token-function">values</span>()          <span class="token-comment"># dict_values([1, 2])</span>
+d.<span class="token-function">items</span>()           <span class="token-comment"># dict_items([('a',1),('b',2)])</span>
+d.<span class="token-function">pop</span>(<span class="token-string">"a"</span>)          <span class="token-comment"># 1  — حذف و برگرداندن</span>
+d.<span class="token-function">update</span>({<span class="token-string">"c"</span>: <span class="token-number">3</span>})  <span class="token-comment"># اضافه کردن دسته‌جمعی</span>
+d.<span class="token-function">clear</span>()           <span class="token-comment"># خالی کردن کامل</span>
+<span class="token-function">len</span>(d)              <span class="token-comment"># تعداد کلیدها</span>
+<span class="token-string">"b"</span> <span class="token-keyword">in</span> d            <span class="token-comment"># True — بررسی وجود کلید</span></code></pre>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ─── EXERCISES ─── -->
+        <section class="lesson-section" id="exercises">
+          <div class="section-label">
+            <span class="section-label-icon">✏️</span>
+            تمرین‌ها
+          </div>
+
+          <div class="exercise-list">
+            <div class="exercise-card">
+              <div class="exercise-header">
+                <div class="exercise-num">تمرین ۱</div>
+              </div>
+              <p class="exercise-desc">
+                یک دیکشنری برای اطلاعات خودت بساز با کلیدهای <code>name</code>،
+                <code>age</code>، <code>city</code> و <code>job</code>. سپس
+                اطلاعات را با یک حلقه <code>for</code> و
+                <code>.items()</code> به صورت زیبا چاپ کن.
+              </p>
+              <details class="exercise-hint">
+                <summary>راهنمایی 💡</summary>
+                <div class="hint-body">
+                  <pre><code><span class="token-text">me</span> = {
+    <span class="token-string">"name"</span>: <span class="token-string">"اسم تو"</span>,
+    <span class="token-string">"age"</span>: <span class="token-number">25</span>,
+    <span class="token-string">"city"</span>: <span class="token-string">"شهر تو"</span>,
+    <span class="token-string">"job"</span>: <span class="token-string">"دانشجو"</span>
+}
+<span class="token-keyword">for</span> key, value <span class="token-keyword">in</span> me.<span class="token-function">items</span>():
+    <span class="token-function">print</span>(<span class="token-string">f"{key}: {value}"</span>)</code></pre>
+                </div>
+              </details>
+            </div>
+
+            <div class="exercise-card">
+              <div class="exercise-header">
+                <div class="exercise-num">تمرین ۲</div>
+              </div>
+              <p class="exercise-desc">
+                یک دیکشنری از نام و نمره ۵ دانش‌آموز بساز. سپس برنامه‌ای بنویس
+                که: الف) میانگین نمرات را محاسبه کند. ب) نام دانش‌آموزانی که
+                نمره‌شان بالای ۱۵ است را چاپ کند.
+              </p>
+              <details class="exercise-hint">
+                <summary>راهنمایی 💡</summary>
+                <div class="hint-body">
+                  <pre><code><span class="token-text">scores</span> = {<span class="token-string">"علی"</span>: <span class="token-number">18</span>, <span class="token-string">"سارا"</span>: <span class="token-number">14</span>, <span class="token-string">"رضا"</span>: <span class="token-number">20</span>, <span class="token-string">"مینا"</span>: <span class="token-number">12</span>, <span class="token-string">"حسن"</span>: <span class="token-number">16</span>}
+
+<span class="token-text">avg</span> = <span class="token-function">sum</span>(scores.<span class="token-function">values</span>()) / <span class="token-function">len</span>(scores)
+<span class="token-function">print</span>(<span class="token-string">f"میانگین: {avg}"</span>)
+
+<span class="token-keyword">for</span> name, score <span class="token-keyword">in</span> scores.<span class="token-function">items</span>():
+    <span class="token-keyword">if</span> score > <span class="token-number">15</span>:
+        <span class="token-function">print</span>(name)</code></pre>
+                </div>
+              </details>
+            </div>
+
+            <div class="exercise-card">
+              <div class="exercise-header">
+                <div class="exercise-num">تمرین ۳</div>
+                <span class="exercise-level exercise-hard">چالشی</span>
+              </div>
+              <p class="exercise-desc">
+                یک رشته از کاربر بگیر و تعداد تکرار هر حرف را با دیکشنری بشمار و
+                چاپ کن. مثلاً برای <code>"hello"</code> جواب باید
+                <code>h:1, e:1, l:2, o:1</code> باشد.
+              </p>
+              <details class="exercise-hint">
+                <summary>راهنمایی 💡</summary>
+                <div class="hint-body">
+                  <pre><code><span class="token-text">text</span> = <span class="token-function">input</span>(<span class="token-string">"یک کلمه وارد کن: "</span>)
+<span class="token-text">counter</span> = {}
+
+<span class="token-keyword">for</span> char <span class="token-keyword">in</span> text:
+    counter[char] = counter.<span class="token-function">get</span>(char, <span class="token-number">0</span>) + <span class="token-number">1</span>
+
+<span class="token-keyword">for</span> char, count <span class="token-keyword">in</span> counter.<span class="token-function">items</span>():
+    <span class="token-function">print</span>(<span class="token-string">f"{char}: {count}"</span>)</code></pre>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── REFERENCES ─── -->
+        <section class="lesson-section" id="references">
+          <div class="section-label">
+            <span class="section-label-icon">📎</span>
+            منابع و مطالعه بیشتر
+          </div>
+
+          <div class="reference-list">
+            <a
+              href="https://docs.python.org/3/library/stdtypes.html#mapping-types-dict"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">مستندات رسمی پایتون — Dictionary</div>
+                <div class="ref-desc">
+                  لیست کامل تمام متدها و عملیات دیکشنری در Python.org
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://realpython.com/python-dicts/"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">
+                  Real Python — Dictionaries in Python
+                </div>
+                <div class="ref-desc">
+                  مقاله جامع با مثال‌های کاربردی و توضیح دقیق نحوه کار دیکشنری
+                  در حافظه
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://www.w3schools.com/python/python_dictionaries.asp"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">W3Schools — Python Dictionaries</div>
+                <div class="ref-desc">
+                  آموزش تعاملی با امکان اجرای کد آنلاین مستقیم در مرورگر
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://realpython.com/python-defaultdict/"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">Real Python — defaultdict</div>
+                <div class="ref-desc">
+                  آشنایی با defaultdict از ماژول collections — نسخه قدرتمندتر
+                  دیکشنری
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ─── NAVIGATION ─── -->
+        <div class="lesson-nav-btns">
+          <a href="15.html" class="lesson-nav-btn lesson-nav-prev">
+            <span>&LeftAngleBracket;</span>
+            <div>
+              <div class="nav-btn-label">جلسه قبل</div>
+              <div class="nav-btn-title"></div>
+            </div>
+          </a>
+          <a href="17.html" class="lesson-nav-btn lesson-nav-next">
+            <div style="text-align: right">
+              <div class="nav-btn-label">جلسه بعد</div>
+              <div class="nav-btn-title"></div>
+            </div>
+            <span>&RightAngleBracket;</span>
+          </a>
+        </div>
+      </main>
+    </div>
+    <!-- end lesson-layout -->
+
+    <script src="assets/js/lesson.js"></script>
+  </body>
+</html>

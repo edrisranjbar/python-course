@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دوره صفر تا صد پایتون – مدرس: ادریس رنجبر</title>
+    <meta
+      name="description"
+      content="راه‌اندازی پیش‌نیازها — جلسه ۲ دوره صفر تا صد پایتون با ادریس رنجبر"
+    />
+    <link rel="icon" href="assets/icons/python.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/lesson.css" />
+  </head>
+  <body>
+    <!-- ─── NAV ─── -->
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">🐍</div>
+        <span class="nav-logo-text">دوره صفر تا صد پایتون</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#curriculum">سرفصل‌ها</a></li>
+        <li><a href="index.html#donate" class="nav-cta">حمایت مالی ❤️</a></li>
+      </ul>
+      <button
+        id="nav-toggle"
+        style="
+          display: none;
+          background: none;
+          border: none;
+          color: var(--text-secondary);
+          font-size: 1.4rem;
+          cursor: pointer;
+        "
+      >
+        ☰
+      </button>
+    </nav>
+
+    <!-- ─── LESSON LAYOUT ─── -->
+    <div class="lesson-layout" style="position: relative; z-index: 1">
+      <main class="lesson-main" data-lesson="2">
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+          <a href="index.html">خانه</a>
+          <span class="bc-sep">›</span>
+          <a href="index.html#curriculum">فصل ۱</a>
+          <span class="bc-sep">›</span>
+          <span>راه‌اندازی پیش‌نیازها</span>
+        </div>
+
+        <!-- LESSON HEADER -->
+        <div class="lesson-header">
+          <h1 class="lesson-title">قسمت ۲: راه‌اندازی پیش‌نیازها</h1>
+          <p class="lesson-lead">
+            در این جلسه پیش‌نیازهای ضروری برای شروع کدنویسی را روی سیستم‌عامل
+            نصب و آماده می‌کنیم. به دو ابزار اصلی نیاز داریم:
+            <strong>مفسر پایتون</strong> که کدهایمان را اجرا می‌کند، و
+            <strong>VS Code</strong> که محیط نوشتن کد است.
+          </p>
+        </div>
+
+        <!-- ─── VIDEOS ─── -->
+        <section class="lesson-section" id="videos">
+          <div class="section-label">
+            <span class="section-label-icon">🎬</span>
+            ویدیوهای آموزشی
+          </div>
+
+          <div class="video-tabs">
+            <button class="video-tab active" data-target="youtube-player">
+              یوتیوب
+            </button>
+            <button class="video-tab" data-target="aparat-player">
+              آپارات
+            </button>
+          </div>
+
+          <!-- YOUTUBE -->
+          <div class="video-player-wrap active" id="youtube-player">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="آموزش پایتون ۲۰۲۶ - قسمت ۲: راه‌اندازی پیش‌نیازها"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              📺 برای تماشا در یوتیوب:
+              <a
+                href="https://youtube.com/watch?v=VIDEO_ID"
+                target="_blank"
+                rel="noopener"
+                >باز کردن در یوتیوب ↗</a
+              >
+            </div>
+          </div>
+
+          <!-- APARAT -->
+          <div class="video-player-wrap" id="aparat-player">
+            <div class="video-embed">
+              <iframe
+                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
+                title="آموزش پایتون - قسمت ۲: راه‌اندازی پیش‌نیازها"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-caption">
+              🎥 برای تماشا در آپارات:
+              <a
+                href="https://aparat.com/v/APARAT_HASH"
+                target="_blank"
+                rel="noopener"
+                >باز کردن در آپارات ↗</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ─── DESCRIPTION ─── -->
+        <section class="lesson-section" id="description">
+          <div class="section-label">
+            <span class="section-label-icon">📖</span>
+            توضیحات جلسه
+          </div>
+
+          <div class="lesson-content">
+            <section>
+              <h2>مرحله اول: دانلود و نصب پایتون در ویندوز</h2>
+              <p>برای نصب پایتون مراحل زیر را به دقت دنبال کنید:</p>
+              <ul>
+                <li>
+                  در مرورگر خود عبارت <code>Download Python</code> را جستجو کنید
+                  یا مستقیماً به سایت رسمی پایتون به آدرس
+                  <strong>python.org</strong> مراجعه کنید.
+                </li>
+                <li>
+                  به بخش <strong>Downloads</strong> بروید. در این بخش همیشه
+                  آخرین نسخه پایدار پایتون برای دانلود قرار دارد (در زمان ضبط
+                  این ویدیو، نسخه ۳.۱۳.۷ آخرین نسخه است).
+                </li>
+                <li>
+                  روی دکمه زردرنگ دانلود کلیک کنید تا فایل نصبی دریافت شود. تا
+                  زمانی که نسخه اصلی شما سری ۳ باشد، تفاوت اعداد اعشاری بعدی
+                  مربوط به تغییرات جزئی است و مشکلی ایجاد نمی‌کند.
+                </li>
+                <li>
+                  پس از اجرای فایل دانلود شده، قبل از کلیک روی
+                  <code>Install Now</code>، حتماً تیک گزینه
+                  <strong>Add Python to PATH</strong> را در پایین پنجره بزنید.
+                  اگر این تیک را نزنید، در آینده برای اجرای برنامه‌ها با مشکل
+                  مواجه می‌شوید.
+                </li>
+                <li>
+                  سپس روی <code>Install Now</code> کلیک کنید تا نصب به پایان
+                  برسد.
+                </li>
+              </ul>
+
+              <div class="info-box info-box-yellow">
+                <span class="info-box-icon">⚠️</span>
+                <div>
+                  <strong>نکته برای سیستم‌های ۳۲ بیتی:</strong> اگر ویندوز شما
+                  ۳۲ بیتی است، در همان صفحه دانلود وارد بخش Windows شوید و نسخه
+                  x86 را انتخاب کنید.
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>مرحله دوم: دانلود و نصب VS Code</h2>
+              <p>
+                برای کدنویسی به یک محیط حرفه‌ای نیاز داریم. ویژوال استودیو کد
+                بهترین انتخاب است:
+              </p>
+              <ul>
+                <li>
+                  عبارت <code>Download VS Code</code> را جستجو کنید و وارد سایت
+                  <strong>code.visualstudio.com</strong> شوید. دقت کنید نسخه
+                  حجیم Visual Studio را اشتباه دانلود نکنید.
+                </li>
+                <li>
+                  با توجه به سیستم‌عامل خود (ویندوز، لینوکس یا مک)، نسخه مناسب
+                  را دانلود کنید.
+                </li>
+                <li>
+                  فایل نصب را اجرا کنید، قوانین را بپذیرید و روی Next کلیک کنید.
+                </li>
+                <li>
+                  در مرحله تنظیمات، پیشنهاد می‌شود تیک گزینه‌هایی که عبارت
+                  <strong>Open with Code</strong> دارند بزنید تا بتوانید با کلیک
+                  راست روی هر پوشه، آن را مستقیم در VS Code باز کنید.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>مرحله سوم: بررسی صحت نصب پایتون</h2>
+              <p>
+                برای اینکه مطمئن شویم پایتون درست نصب شده، باید از خط فرمان
+                سیستم استفاده کنیم:
+              </p>
+              <ul>
+                <li>
+                  در ویندوز برنامه <strong>Terminal</strong> یا
+                  <strong>CMD</strong> را باز کنید.
+                </li>
+                <li>
+                  عبارت <code>python --version</code> را تایپ کرده و Enter
+                  بزنید.
+                </li>
+                <li>
+                  اگر نصب موفق بوده، نسخه نصب‌شده (مثلاً Python 3.13.7) نمایش
+                  داده می‌شود.
+                </li>
+              </ul>
+
+              <div class="info-box info-box-blue">
+                <span class="info-box-icon">💡</span>
+                <div>
+                  اگر بعد از نصب با خطای
+                  <code>'python' is not recognized</code> مواجه شدید، احتمالاً
+                  تیک <strong>Add Python to PATH</strong> را نزده‌اید. پایتون را
+                  uninstall و دوباره با آن تیک نصب کنید.
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>نصب و تنظیم پایتون در لینوکس و مک</h2>
+              <p>
+                در اکثر سیستم‌عامل‌های مبتنی بر یونیکس مثل مک، اوبونتو و دبیان،
+                پایتون ۳ به صورت پیش‌فرض نصب است. برای بررسی، ترمینال را باز
+                کرده و دستور <code>python3 --version</code> را وارد کنید.
+              </p>
+              <p>
+                اگر پایتون نصب نبود، در توزیع‌های مبتنی بر دبیان مثل اوبونتو با
+                این دو دستور نصب کنید:
+              </p>
+
+              <div class="code-block">
+                <div class="code-block-header">
+                  <span class="code-lang">Terminal</span>
+                  <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+                </div>
+                <pre><code>sudo apt update
+sudo apt install python3</code></pre>
+              </div>
+
+              <h2>ترفند: اجرای پایتون ۳ فقط با دستور python در لینوکس</h2>
+              <p>
+                در لینوکس معمولاً دستور <code>python</code> به نسخه قدیمی ۲
+                اشاره دارد و برای نسخه جدید باید <code>python3</code> تایپ کنید.
+                اگر می‌خواهید با نوشتن <code>python</code> مستقیماً پایتون ۳
+                اجرا شود، باید یک Alias بسازید:
+              </p>
+              <ul>
+                <li>
+                  فایل تنظیمات شِل خود را باز کنید — برای zsh:
+                  <code>vi ~/.zshrc</code> یا برای bash:
+                  <code>vi ~/.bashrc</code>
+                </li>
+                <li>
+                  در انتهای فایل این خط را اضافه کنید:
+                  <code>alias python='python3'</code>
+                </li>
+                <li>
+                  فایل را ذخیره کرده و ترمینال را ببندید و دوباره باز کنید، یا
+                  دستور <code>source ~/.zshrc</code> را بزنید.
+                </li>
+              </ul>
+              <p>
+                حالا با دستور <code>python --version</code> نسخه ۳ برای شما اجرا
+                خواهد شد.
+              </p>
+            </section>
+
+            <section>
+              <h2>نتیجه‌گیری</h2>
+              <p>
+                در این جلسه مفسر پایتون و ویرایشگر VS Code را روی ویندوز و
+                لینوکس نصب کردیم. در جلسه بعدی، نوشتن اولین خطوط کد پایتون را با
+                هم شروع می‌کنیم.
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <!-- ─── REFERENCES ─── -->
+        <section class="lesson-section" id="references">
+          <div class="section-label">
+            <span class="section-label-icon">📎</span>
+            منابع و مطالعه بیشتر
+          </div>
+
+          <div class="reference-list">
+            <a
+              href="https://www.python.org/downloads/"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">python.org — صفحه دانلود رسمی</div>
+                <div class="ref-desc">
+                  آخرین نسخه پایدار پایتون برای ویندوز، مک و لینوکس
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">
+                  code.visualstudio.com — دانلود VS Code
+                </div>
+                <div class="ref-desc">
+                  صفحه رسمی دانلود ویژوال استودیو کد برای همه سیستم‌عامل‌ها
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=ms-python.python"
+              target="_blank"
+              rel="noopener"
+              class="reference-card"
+            >
+              <div class="ref-icon ref-icon-blue">🌐</div>
+              <div class="ref-body">
+                <div class="ref-title">افزونه Python برای VS Code</div>
+                <div class="ref-desc">
+                  افزونه رسمی مایکروسافت برای پشتیبانی کامل از پایتون در VS Code
+                </div>
+              </div>
+              <span class="ref-arrow">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ─── NAVIGATION ─── -->
+        <div class="lesson-nav-btns">
+          <a href="1.html" class="lesson-nav-btn lesson-nav-prev">
+            <span>‹</span>
+            <div>
+              <div class="nav-btn-label">جلسه قبل</div>
+              <div class="nav-btn-title">مقدمه</div>
+            </div>
+          </a>
+          <a href="3.html" class="lesson-nav-btn lesson-nav-next">
+            <div style="text-align: right">
+              <div class="nav-btn-label">جلسه بعد</div>
+              <div class="nav-btn-title">نوشتن و اجرای اولین برنامه</div>
+            </div>
+            <span>›</span>
+          </a>
+        </div>
+      </main>
+    </div>
+    <!-- end lesson-layout -->
+
+    <script src="assets/js/lesson.js"></script>
+  </body>
+</html>
