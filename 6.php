@@ -1,77 +1,18 @@
-<!doctype html>
-<html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>دوره صفر تا صد پایتون – مدرس: ادریس رنجبر</title>
-    <meta
-      name="description"
-      content="آموزش متغیرها و انواع داده (Data Types) در پایتون — جلسه ۶ دوره صفر تا صد پایتون با ادریس رنجبر"
-    />
-    <link rel="icon" href="assets/icons/python.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/lesson.css" />
-    <script>
-      !(function (e, t, n) {
-        ((e.yektanetAnalyticsObject = n),
-          (e[n] =
-            e[n] ||
-            function () {
-              e[n].q.push(arguments);
-            }),
-          (e[n].q = e[n].q || []));
-        var a = t.getElementsByTagName("head")[0],
-          r = new Date(),
-          c =
-            "https://cdn.yektanet.com/superscript/EdTGnAiU/native-python.edii.ir-46990/yn_pub.js?v=" +
-            r.getFullYear().toString() +
-            "0" +
-            r.getMonth() +
-            "0" +
-            r.getDate() +
-            "0" +
-            r.getHours(),
-          s = t.createElement("link");
-        ((s.rel = "preload"),
-          (s.as = "script"),
-          (s.href = c),
-          a.appendChild(s));
-        var l = t.createElement("script");
-        ((l.async = !0), (l.src = c), a.appendChild(l));
-      })(window, document, "yektanet");
-    </script>
-  </head>
-  <body>
-    <nav>
-      <a href="index.html" class="nav-logo">
-        <div class="nav-logo-icon">🐍</div>
-        <span class="nav-logo-text">دوره صفر تا صد پایتون</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html#curriculum">سرفصل‌ها</a></li>
-        <li><a href="index.html#donate" class="nav-cta">حمایت مالی ❤️</a></li>
-      </ul>
-      <button
-        id="nav-toggle"
-        style="
-          display: none;
-          background: none;
-          border: none;
-          color: var(--text-secondary);
-          font-size: 1.4rem;
-          cursor: pointer;
-        "
-      >
-        ☰
-      </button>
-    </nav>
+<?php
+$root        = './';
+$description = 'متغیرها و انواع داده';
+$extraCss    = 'assets/css/lesson.css';
+$extraJs     = 'assets/js/lesson.js';
 
+require $root . 'includes/head.php';
+require $root . 'includes/nav.php';
+?>
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <main class="lesson-main" data-lesson="6">
         <div class="breadcrumb">
-          <a href="index.html">خانه</a>
+          <a href="index.php">خانه</a>
           <span class="bc-sep">›</span>
-          <a href="index.html#curriculum">فصل ۱</a>
+          <a href="index.php#curriculum">فصل ۱</a>
           <span class="bc-sep">›</span>
           <span>متغیرها و انواع داده</span>
         </div>
@@ -351,14 +292,14 @@ name = <span class="token-string">"ادریس"</span></code></pre>
         </section>
 
         <div class="lesson-nav-btns">
-          <a href="5.html" class="lesson-nav-btn lesson-nav-prev">
+          <a href="5.php" class="lesson-nav-btn lesson-nav-prev">
             <span>‹</span>
             <div>
               <div class="nav-btn-label">جلسه قبل</div>
               <div class="nav-btn-title">تابع پرینت</div>
             </div>
           </a>
-          <a href="7.html" class="lesson-nav-btn lesson-nav-next">
+          <a href="7.php" class="lesson-nav-btn lesson-nav-next">
             <div style="text-align: right">
               <div class="nav-btn-label">جلسه بعد</div>
               <div class="nav-btn-title">عملگرها در پایتون</div>
@@ -368,6 +309,4 @@ name = <span class="token-string">"ادریس"</span></code></pre>
         </div>
       </main>
     </div>
-    <script src="assets/js/lesson.js"></script>
-  </body>
-</html>
+<?php require $root . 'includes/footer.php'; ?>

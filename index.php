@@ -15,7 +15,6 @@
     <!-- ─── NAV ─── -->
     <nav>
       <a href="#" class="nav-logo">
-        <div class="nav-logo-icon">🐍</div>
         <span class="nav-logo-text">دوره صفر تا صد پایتون</span>
       </a>
       <ul class="nav-links">
@@ -307,79 +306,84 @@
               </div>
             </div>
             <div class="chapter-lessons">
-              <a href="1.html">
+              <a href="1.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>مقدمه
                 </div>
               </a>
-              <a href="2.html">
+              <a href="2.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>راه اندازی پیش نیازها
                 </div>
               </a>
-              <a href="3.html">
+              <a href="3.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>نوشتن و اجرای اولین برنامه
                 </div>
               </a>
-              <a href="4.html">
+              <a href="4.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>نوشتن کامنت
                 </div>
               </a>
-              <a href="5.html">
+              <a href="5.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>تابع پرینت
                 </div>
               </a>
-              <a href="6.html">
+              <a href="6.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>متغیرها و انواع داده
                 </div>
               </a>
-              <a href="7.html">
+              <a href="7.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>عملگرهای ریاضی
                 </div>
               </a>
-              <a href="8.html">
+              <a href="8.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>عملگرهای مقایسه‌ای
                 </div>
               </a>
-              <a href="9.html">
+              <a href="9.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>گرفتن ورودی از کاربر
                 </div>
               </a>
-              <a href="10.html">
+              <a href="10.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>کار با رشته‌ها
                 </div>
               </a>
-              <a href="11.html">
+              <a href="11.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>توابع رشته‌ها
                 </div>
               </a>
-              <a href="12.html">
+              <a href="12.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>فرمت‌کردن رشته‌ها
                 </div>
               </a>
-              <a href="13.html">
+              <a href="13.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>لیست‌ها
                 </div>
               </a>
-              <a href="14.html">
+              <a href="14.php">
                 <div class="lesson-item">
                   <span class="lesson-icon">▶</span>تاپل‌ها
                 </div>
               </a>
-              <a href="15.html">
+              <a href="15.php">
                 <div class="lesson-item no-border">
                   <span class="lesson-icon">▶</span>مجموعه‌ها
+                </div>
+              </a>
+              <a href="16.php">
+                <div class="lesson-item no-border">
+                  <span class="lesson-icon">▶</span>دیکشنری
                 </div>
               </a>
             </div>

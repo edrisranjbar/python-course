@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Allow important public assets
+Allow: /assets/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/icons/
+Allow: /assets/fonts/
+Allow: /assets/images/
+
+# Block internal PHP/includes folders
+Disallow: /includes/
+Disallow: /data/
+Disallow: /tools/
+Disallow: /storage/
+Disallow: /vendor/
+
+# Block unnecessary system or temporary files
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.env$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /*.sql$
+
+# Block URL parameters if any exist later
+Disallow: /*?*
+
+# Sitemap
+Sitemap: https://python.edii.ir/sitemap.xml
