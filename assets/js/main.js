@@ -25,6 +25,15 @@ document.querySelectorAll('.chapter-header').forEach(header => {
   });
 });
 
+// ─── DYNAMIC CHAPTER LESSON COUNT ───
+document.querySelectorAll(".chapter-card").forEach(card => {
+  const countEl = card.querySelector(".chapter-count");
+  const count = card.querySelectorAll(".chapter-lessons .lesson-item").length;
+  if (count > 0) {
+    countEl.textContent = count.toLocaleString("fa-IR") + " جلسه";
+  }
+});
+
 // ─── FAQ ACCORDION ───
 document.querySelectorAll('.faq-question').forEach(q => {
   q.addEventListener('click', () => {
@@ -105,7 +114,7 @@ if (canvas) {
   const ctx = canvas.getContext('2d');
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
-  
+
   const particles = Array.from({ length: 40 }, () => ({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
