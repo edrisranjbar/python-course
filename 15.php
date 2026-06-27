@@ -53,7 +53,7 @@ require $root . 'includes/nav.php';
             <div class="video-embed">
               <!-- جایگزین کن: VIDEO_ID یوتیوب این جلسه -->
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
+                src="https://www.youtube.com/embed/rXycN0BCxz0?si=jAuBPWBSNYsUv4-G"
                 title="آموزش مجموعه‌ها در پایتون - جلسه ۱۵"
                 frameborder="0"
                 allow="
@@ -72,7 +72,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               📺 برای تماشا در یوتیوب:
               <a
-                href="https://youtube.com/watch?v=VIDEO_ID"
+                href="https://www.youtube.com/watch?v=rXycN0BCxz0&list=PLjmYP2ltjzGNsXdeNCgOiuyF1ZJyTDDYg&index=2"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در یوتیوب ↗</a

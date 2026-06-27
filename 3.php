@@ -51,7 +51,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap active" id="youtube-player">
             <div class="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
+                src="https://www.youtube.com/embed/QEAPpePXdO0?si=8F5HpuKzMOM58zQ-"
                 title="آموزش پایتون ۲۰۲۶ - قسمت ۳: نوشتن و اجرای اولین برنامه"
                 frameborder="0"
                 allow="
@@ -70,7 +70,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               📺 برای تماشا در یوتیوب:
               <a
-                href="https://youtube.com/watch?v=VIDEO_ID"
+                href="https://www.youtube.com/watch?v=QEAPpePXdO0"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در یوتیوب ↗</a

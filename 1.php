@@ -73,7 +73,7 @@ require_once $root . 'includes/nav.php';
             <div class="video-caption">
               📺 برای تماشا در یوتیوب:
               <a
-                href="https://youtube.com/watch?v=VIDEO_ID"
+                href="https://www.youtube.com/watch?v=gKfQaUen7tQ"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در یوتیوب ↗</a

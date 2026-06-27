@@ -52,7 +52,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap active" id="youtube-player">
             <div class="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
+                src="https://www.youtube.com/embed/9O6-XHXPbI8?si=nADuXfj-WzC7QgBA"
                 title="آموزش دیکشنری در پایتون - جلسه ۱۶"
                 frameborder="0"
                 allow="
@@ -71,7 +71,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               📺 برای تماشا در یوتیوب:
               <a
-                href="https://youtube.com/watch?v=VIDEO_ID"
+                href="https://www.youtube.com/watch?v=9O6-XHXPbI8&list=PLjmYP2ltjzGNsXdeNCgOiuyF1ZJyTDDYg&index=1"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در یوتیوب ↗</a

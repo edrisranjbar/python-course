@@ -386,6 +386,11 @@
                   <span class="lesson-icon">▶</span>دیکشنری
                 </div>
               </a>
+              <a href="17.php">
+                <div class="lesson-item no-border">
+                  <span class="lesson-icon">▶</span>حلقه‌ها
+                </div>
+              </a>
             </div>
           </div>
 

@@ -15,6 +15,7 @@ const LESSONS = [
   { id: 14, file: "14.php", title: "تاپل‌ها" },
   { id: 15, file: "15.php", title: "مجموعه‌ها" },
   { id: 16, file: "16.php", title: "دیکشنری" },
+  { id: 16, file: "17.php", title: "حلقه‌ها" },
 ];
 
 // ─── VIDEO TABS ───
@@ -49,10 +50,16 @@ function copyCode(btn) {
 // ─── SMOOTH SCROLL ───
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
-    const target = document.querySelector(a.getAttribute("href"));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth" });
+    const href = a.getAttribute("href");
+    if (!href || href === "#") return; // skip bare # links
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    } catch (err) {
+      // invalid selector, ignore
     }
   });
 });

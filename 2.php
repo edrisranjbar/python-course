@@ -50,7 +50,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap active" id="youtube-player">
             <div class="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
+                src="https://www.youtube.com/embed/933R9o_Kv9c?si=eFuPK33UnGvaw-Ky"
                 title="آموزش پایتون ۲۰۲۶ - قسمت ۲: راه‌اندازی پیش‌نیازها"
                 frameborder="0"
                 allow="
@@ -69,7 +69,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               📺 برای تماشا در یوتیوب:
               <a
-                href="https://youtube.com/watch?v=VIDEO_ID"
+                href="https://www.youtube.com/watch?v=933R9o_Kv9c"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در یوتیوب ↗</a

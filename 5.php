@@ -47,7 +47,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap active" id="youtube-player">
             <div class="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/ek9uIOb_erI"
+                src="https://www.youtube.com/embed/ek9uIOb_erI?si=Wt720zBuJR8Cvi9U"
                 title="آموزش پایتون ۲۰۲۶ - قسمت ۵: تابع پرینت"
                 frameborder="0"
                 allow="
@@ -66,7 +66,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               📺 برای تماشا در یوتیوب:
               <a
-                href="https://youtube.com/watch?v=ek9uIOb_erI"
+                href="https://www.youtube.com/watch?v=jqRJGsCobvo"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در یوتیوب ↗</a
