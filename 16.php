@@ -4,6 +4,68 @@ $description = 'دیکشنری';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$exercises = [
+  [
+    'level' => null,
+    'desc'  => 'یک دیکشنری برای اطلاعات خودت بساز با کلیدهای <code>name</code>، <code>age</code>، <code>city</code> و <code>job</code>. سپس اطلاعات را با یک حلقه <code>for</code> و <code>.items()</code> به صورت زیبا چاپ کن.',
+    'hint'  => '<span class="token-text">me</span> = {
+    <span class="token-string">"name"</span>: <span class="token-string">"اسم تو"</span>,
+    <span class="token-string">"age"</span>: <span class="token-number">25</span>,
+    <span class="token-string">"city"</span>: <span class="token-string">"شهر تو"</span>,
+    <span class="token-string">"job"</span>: <span class="token-string">"دانشجو"</span>
+}
+<span class="token-keyword">for</span> key, value <span class="token-keyword">in</span> me.<span class="token-function">items</span>():
+    <span class="token-function">print</span>(<span class="token-string">f"{key}: {value}"</span>)',
+  ],
+  [
+    'level' => null,
+    'desc'  => 'یک دیکشنری از نام و نمره ۵ دانش‌آموز بساز. سپس برنامه‌ای بنویس که: الف) میانگین نمرات را محاسبه کند. ب) نام دانش‌آموزانی که نمره‌شان بالای ۱۵ است را چاپ کند.',
+    'hint'  => '<span class="token-text">scores</span> = {<span class="token-string">"علی"</span>: <span class="token-number">18</span>, <span class="token-string">"سارا"</span>: <span class="token-number">14</span>, <span class="token-string">"رضا"</span>: <span class="token-number">20</span>, <span class="token-string">"مینا"</span>: <span class="token-number">12</span>, <span class="token-string">"حسن"</span>: <span class="token-number">16</span>}
+
+<span class="token-text">avg</span> = <span class="token-function">sum</span>(scores.<span class="token-function">values</span>()) / <span class="token-function">len</span>(scores)
+<span class="token-function">print</span>(<span class="token-string">f"میانگین: {avg}"</span>)
+
+<span class="token-keyword">for</span> name, score <span class="token-keyword">in</span> scores.<span class="token-function">items</span>():
+    <span class="token-keyword">if</span> score > <span class="token-number">15</span>:
+        <span class="token-function">print</span>(name)',
+  ],
+  [
+    'level' => 'hard',
+    'desc'  => 'یک رشته از کاربر بگیر و تعداد تکرار هر حرف را با دیکشنری بشمار و چاپ کن. مثلاً برای <code>"hello"</code> جواب باید <code>h:1, e:1, l:2, o:1</code> باشد.',
+    'hint'  => '<span class="token-text">text</span> = <span class="token-function">input</span>(<span class="token-string">"یک کلمه وارد کن: "</span>)
+<span class="token-text">counter</span> = {}
+
+<span class="token-keyword">for</span> char <span class="token-keyword">in</span> text:
+    counter[char] = counter.<span class="token-function">get</span>(char, <span class="token-number">0</span>) + <span class="token-number">1</span>
+
+<span class="token-keyword">for</span> char, count <span class="token-keyword">in</span> counter.<span class="token-function">items</span>():
+    <span class="token-function">print</span>(<span class="token-string">f"{char}: {count}"</span>)',
+  ],
+];
+
+$references = [
+  [
+    'url'   => 'https://docs.python.org/3/library/stdtypes.html#mapping-types-dict',
+    'title' => 'مستندات رسمی پایتون — Dictionary',
+    'desc'  => 'لیست کامل تمام متدها و عملیات دیکشنری در Python.org',
+  ],
+  [
+    'url'   => 'https://realpython.com/python-dicts/',
+    'title' => 'Real Python — Dictionaries in Python',
+    'desc'  => 'مقاله جامع با مثال‌های کاربردی و توضیح دقیق نحوه کار دیکشنری در حافظه',
+  ],
+  [
+    'url'   => 'https://www.w3schools.com/python/python_dictionaries.asp',
+    'title' => 'W3Schools — Python Dictionaries',
+    'desc'  => 'آموزش تعاملی با امکان اجرای کد آنلاین مستقیم در مرورگر',
+  ],
+  [
+    'url'   => 'https://realpython.com/python-defaultdict/',
+    'title' => 'Real Python — defaultdict',
+    'desc'  => 'آشنایی با defaultdict از ماژول collections — نسخه قدرتمندتر دیکشنری',
+  ],
+];
+
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
@@ -353,166 +415,10 @@ d.<span class="token-function">clear</span>()           <span class="token-comme
         </section>
 
         <!-- ─── EXERCISES ─── -->
-        <section class="lesson-section" id="exercises">
-          <div class="section-label">
-            <span class="section-label-icon">✏️</span>
-            تمرین‌ها
-          </div>
-
-          <div class="exercise-list">
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۱</div>
-              </div>
-              <p class="exercise-desc">
-                یک دیکشنری برای اطلاعات خودت بساز با کلیدهای <code>name</code>،
-                <code>age</code>، <code>city</code> و <code>job</code>. سپس
-                اطلاعات را با یک حلقه <code>for</code> و
-                <code>.items()</code> به صورت زیبا چاپ کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">me</span> = {
-    <span class="token-string">"name"</span>: <span class="token-string">"اسم تو"</span>,
-    <span class="token-string">"age"</span>: <span class="token-number">25</span>,
-    <span class="token-string">"city"</span>: <span class="token-string">"شهر تو"</span>,
-    <span class="token-string">"job"</span>: <span class="token-string">"دانشجو"</span>
-}
-<span class="token-keyword">for</span> key, value <span class="token-keyword">in</span> me.<span class="token-function">items</span>():
-    <span class="token-function">print</span>(<span class="token-string">f"{key}: {value}"</span>)</code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۲</div>
-              </div>
-              <p class="exercise-desc">
-                یک دیکشنری از نام و نمره ۵ دانش‌آموز بساز. سپس برنامه‌ای بنویس
-                که: الف) میانگین نمرات را محاسبه کند. ب) نام دانش‌آموزانی که
-                نمره‌شان بالای ۱۵ است را چاپ کند.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">scores</span> = {<span class="token-string">"علی"</span>: <span class="token-number">18</span>, <span class="token-string">"سارا"</span>: <span class="token-number">14</span>, <span class="token-string">"رضا"</span>: <span class="token-number">20</span>, <span class="token-string">"مینا"</span>: <span class="token-number">12</span>, <span class="token-string">"حسن"</span>: <span class="token-number">16</span>}
-
-<span class="token-text">avg</span> = <span class="token-function">sum</span>(scores.<span class="token-function">values</span>()) / <span class="token-function">len</span>(scores)
-<span class="token-function">print</span>(<span class="token-string">f"میانگین: {avg}"</span>)
-
-<span class="token-keyword">for</span> name, score <span class="token-keyword">in</span> scores.<span class="token-function">items</span>():
-    <span class="token-keyword">if</span> score > <span class="token-number">15</span>:
-        <span class="token-function">print</span>(name)</code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۳</div>
-                <span class="exercise-level exercise-hard">چالشی</span>
-              </div>
-              <p class="exercise-desc">
-                یک رشته از کاربر بگیر و تعداد تکرار هر حرف را با دیکشنری بشمار و
-                چاپ کن. مثلاً برای <code>"hello"</code> جواب باید
-                <code>h:1, e:1, l:2, o:1</code> باشد.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">text</span> = <span class="token-function">input</span>(<span class="token-string">"یک کلمه وارد کن: "</span>)
-<span class="token-text">counter</span> = {}
-
-<span class="token-keyword">for</span> char <span class="token-keyword">in</span> text:
-    counter[char] = counter.<span class="token-function">get</span>(char, <span class="token-number">0</span>) + <span class="token-number">1</span>
-
-<span class="token-keyword">for</span> char, count <span class="token-keyword">in</span> counter.<span class="token-function">items</span>():
-    <span class="token-function">print</span>(<span class="token-string">f"{char}: {count}"</span>)</code></pre>
-                </div>
-              </details>
-            </div>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/exercises.php'; ?>
 
         <!-- ─── REFERENCES ─── -->
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://docs.python.org/3/library/stdtypes.php#mapping-types-dict"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی پایتون — Dictionary</div>
-                <div class="ref-desc">
-                  لیست کامل تمام متدها و عملیات دیکشنری در Python.org
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://realpython.com/python-dicts/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">
-                  Real Python — Dictionaries in Python
-                </div>
-                <div class="ref-desc">
-                  مقاله جامع با مثال‌های کاربردی و توضیح دقیق نحوه کار دیکشنری
-                  در حافظه
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://www.w3schools.com/python/python_dictionaries.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python Dictionaries</div>
-                <div class="ref-desc">
-                  آموزش تعاملی با امکان اجرای کد آنلاین مستقیم در مرورگر
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://realpython.com/python-defaultdict/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">Real Python — defaultdict</div>
-                <div class="ref-desc">
-                  آشنایی با defaultdict از ماژول collections — نسخه قدرتمندتر
-                  دیکشنری
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">

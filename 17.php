@@ -3,7 +3,70 @@ $root        = './';
 $description = 'حلقه‌ها';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
+$exercises = [
+  [
+    'level' => null,
+    'desc'  => 'با استفاده از <code>range()</code> و یک حلقه <code>for</code>، اعداد ۱ تا ۱۰۰ را چاپ کن. سپس فقط اعداد زوج را چاپ کن.',
+    'hint'  => '<span class="token-keyword">for</span> i <span class="token-keyword">in</span> <span class="token-function">range</span>(<span class="token-number">1</span>, <span class="token-number">101</span>):
+    <span class="token-function">print</span>(i)
 
+<span class="token-comment"># فقط زوج‌ها</span>
+<span class="token-keyword">for</span> i <span class="token-keyword">in</span> <span class="token-function">range</span>(<span class="token-number">2</span>, <span class="token-number">101</span>, <span class="token-number">2</span>):
+    <span class="token-function">print</span>(i)',
+  ],
+  [
+    'level' => null,
+    'desc'  => 'یک لیست از نمرات بساز. با حلقه <code>for</code> روی لیست بگرد و مجموع نمرات را حساب کن. سپس بدون استفاده از تابع <code>sum()</code> میانگین رو هم بده.',
+    'hint'  => '<span class="token-text">grades</span> = [<span class="token-number">15</span>, <span class="token-number">18</span>, <span class="token-number">12</span>, <span class="token-number">20</span>, <span class="token-number">14</span>]
+<span class="token-text">total</span> = <span class="token-number">0</span>
+
+<span class="token-keyword">for</span> grade <span class="token-keyword">in</span> grades:
+    total += grade
+
+<span class="token-function">print</span>(<span class="token-string">"مجموع:"</span>, total)
+<span class="token-function">print</span>(<span class="token-string">"میانگین:"</span>, total / <span class="token-function">len</span>(grades))',
+  ],
+  [
+    'level' => 'hard',
+    'desc'  => 'یک عدد از کاربر بگیر و با حلقه <code>while</code> تعیین کن آیا اول (prime) هست یا نه. عدد اول عددیه که فقط بر ۱ و خودش بخش‌پذیره.',
+    'hint'  => '<span class="token-text">n</span> = <span class="token-function">int</span>(<span class="token-function">input</span>(<span class="token-string">"یک عدد وارد کن: "</span>))
+<span class="token-text">is_prime</span> = <span class="token-keyword">True</span>
+<span class="token-text">i</span> = <span class="token-number">2</span>
+
+<span class="token-keyword">while</span> i < n:
+    <span class="token-keyword">if</span> n % i == <span class="token-number">0</span>:
+        is_prime = <span class="token-keyword">False</span>
+        <span class="token-keyword">break</span>
+    i += <span class="token-number">1</span>
+
+<span class="token-keyword">if</span> is_prime <span class="token-keyword">and</span> n > <span class="token-number">1</span>:
+    <span class="token-function">print</span>(n, <span class="token-string">"عدد اول است"</span>)
+<span class="token-keyword">else</span>:
+    <span class="token-function">print</span>(n, <span class="token-string">"عدد اول نیست"</span>)',
+  ],
+];
+$references = [
+  [
+    'url'   => 'https://docs.python.org/3/tutorial/controlflow.html#for-statements',
+    'title' => 'مستندات رسمی پایتون — حلقه for',
+    'desc'  => 'توضیح کامل حلقه for و تابع range در Python.org',
+  ],
+  [
+    'url'   => 'https://realpython.com/python-for-loop/',
+    'title' => 'Real Python — Python for Loop',
+    'desc'  => 'مقاله جامع درباره حلقه for با مثال‌های متنوع و کاربردی',
+  ],
+  [
+    'url'   => 'https://realpython.com/python-while-loop/',
+    'title' => 'Real Python — Python while Loop',
+    'desc'  => 'آموزش کامل حلقه while، break، continue و else در حلقه‌ها',
+  ],
+  [
+    'url'   => 'https://www.w3schools.com/python/python_for_loops.asp',
+    'title' => 'W3Schools — Python Loops',
+    'desc'  => 'آموزش تعاملی حلقه‌های for و while با امکان اجرای کد در مرورگر',
+  ],
+];
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
@@ -234,153 +297,10 @@ require $root . 'includes/nav.php';
         </section>
 
         <!-- ─── EXERCISES ─── -->
-        <section class="lesson-section" id="exercises">
-          <div class="section-label">
-            <span class="section-label-icon">✏️</span>
-            تمرین‌ها
-          </div>
-
-          <div class="exercise-list">
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۱</div>
-              </div>
-              <p class="exercise-desc">
-                با استفاده از <code>range()</code> و یک حلقه <code>for</code>، اعداد ۱ تا ۱۰۰ را چاپ کن. سپس فقط اعداد زوج را چاپ کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-keyword">for</span> i <span class="token-keyword">in</span> <span class="token-function">range</span>(<span class="token-number">1</span>, <span class="token-number">101</span>):
-    <span class="token-function">print</span>(i)
-
-<span class="token-comment"># فقط زوج‌ها</span>
-<span class="token-keyword">for</span> i <span class="token-keyword">in</span> <span class="token-function">range</span>(<span class="token-number">2</span>, <span class="token-number">101</span>, <span class="token-number">2</span>):
-    <span class="token-function">print</span>(i)</code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۲</div>
-              </div>
-              <p class="exercise-desc">
-                یک لیست از نمرات بساز. با حلقه <code>for</code> روی لیست بگرد و مجموع نمرات را حساب کن. سپس بدون استفاده از تابع <code>sum()</code> میانگین رو هم بده.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">grades</span> = [<span class="token-number">15</span>, <span class="token-number">18</span>, <span class="token-number">12</span>, <span class="token-number">20</span>, <span class="token-number">14</span>]
-<span class="token-text">total</span> = <span class="token-number">0</span>
-
-<span class="token-keyword">for</span> grade <span class="token-keyword">in</span> grades:
-    total += grade
-
-<span class="token-function">print</span>(<span class="token-string">"مجموع:"</span>, total)
-<span class="token-function">print</span>(<span class="token-string">"میانگین:"</span>, total / <span class="token-function">len</span>(grades))</code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۳</div>
-                <span class="exercise-level exercise-hard">چالشی</span>
-              </div>
-              <p class="exercise-desc">
-                یک عدد از کاربر بگیر و با حلقه <code>while</code> تعیین کن آیا اول (prime) هست یا نه. عدد اول عددیه که فقط بر ۱ و خودش بخش‌پذیره.
-              </p>
-              <details class="exercise-hint">
-                <summary>راهنمایی 💡</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">n</span> = <span class="token-function">int</span>(<span class="token-function">input</span>(<span class="token-string">"یک عدد وارد کن: "</span>))
-<span class="token-text">is_prime</span> = <span class="token-keyword">True</span>
-<span class="token-text">i</span> = <span class="token-number">2</span>
-
-<span class="token-keyword">while</span> i < n:
-    <span class="token-keyword">if</span> n % i == <span class="token-number">0</span>:
-        is_prime = <span class="token-keyword">False</span>
-        <span class="token-keyword">break</span>
-    i += <span class="token-number">1</span>
-
-<span class="token-keyword">if</span> is_prime <span class="token-keyword">and</span> n > <span class="token-number">1</span>:
-    <span class="token-function">print</span>(n, <span class="token-string">"عدد اول است"</span>)
-<span class="token-keyword">else</span>:
-    <span class="token-function">print</span>(n, <span class="token-string">"عدد اول نیست"</span>)</code></pre>
-                </div>
-              </details>
-            </div>
-
-          </div>
-        </section>
+         <?php require_once $root . 'includes/exercises.php'; ?>
 
         <!-- ─── REFERENCES ─── -->
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://docs.python.org/3/tutorial/controlflow.html#for-statements"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی پایتون — حلقه for</div>
-                <div class="ref-desc">توضیح کامل حلقه for و تابع range در Python.org</div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://realpython.com/python-for-loop/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">Real Python — Python for Loop</div>
-                <div class="ref-desc">مقاله جامع درباره حلقه for با مثال‌های متنوع و کاربردی</div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://realpython.com/python-while-loop/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">Real Python — Python while Loop</div>
-                <div class="ref-desc">آموزش کامل حلقه while، break، continue و else در حلقه‌ها</div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://www.w3schools.com/python/python_for_loops.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python Loops</div>
-                <div class="ref-desc">آموزش تعاملی حلقه‌های for و while با امکان اجرای کد در مرورگر</div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">
