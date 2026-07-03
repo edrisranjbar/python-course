@@ -4,24 +4,37 @@ $description = 'راه‌اندازی پیش‌نیازها';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$references = [
+  [
+    'url'   => 'https://www.python.org/downloads/',
+    'title' => 'python.org — صفحه دانلود رسمی',
+    'desc'  => 'آخرین نسخه پایدار پایتون برای ویندوز، مک و لینوکس',
+  ],
+  [
+    'url'   => 'https://code.visualstudio.com/',
+    'title' => 'code.visualstudio.com — دانلود VS Code',
+    'desc'  => 'صفحه رسمی دانلود ویژوال استودیو کد برای همه سیستم‌عامل‌ها',
+  ],
+  [
+    'url'   => 'https://marketplace.visualstudio.com/items?itemName=ms-python.python',
+    'title' => 'افزونه Python برای VS Code',
+    'desc'  => 'افزونه رسمی مایکروسافت برای پشتیبانی کامل از پایتون در VS Code',
+  ],
+];
+
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
     <!-- ─── LESSON LAYOUT ─── -->
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <main class="lesson-main" data-lesson="2">
+
         <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>راه‌اندازی پیش‌نیازها</span>
-        </div>
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <!-- LESSON HEADER -->
         <div class="lesson-header">
-          <h1 class="lesson-title">قسمت ۲: راه‌اندازی پیش‌نیازها</h1>
+          <h1 class="lesson-title">قسمت ۲: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             در این جلسه پیش‌نیازهای ضروری برای شروع کدنویسی را روی سیستم‌عامل
             نصب و آماده می‌کنیم. به دو ابزار اصلی نیاز داریم:
@@ -269,64 +282,7 @@ sudo apt install python3</code></pre>
         </section>
 
         <!-- ─── REFERENCES ─── -->
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://www.python.org/downloads/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">python.org — صفحه دانلود رسمی</div>
-                <div class="ref-desc">
-                  آخرین نسخه پایدار پایتون برای ویندوز، مک و لینوکس
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://code.visualstudio.com/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">
-                  code.visualstudio.com — دانلود VS Code
-                </div>
-                <div class="ref-desc">
-                  صفحه رسمی دانلود ویژوال استودیو کد برای همه سیستم‌عامل‌ها
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=ms-python.python"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">افزونه Python برای VS Code</div>
-                <div class="ref-desc">
-                  افزونه رسمی مایکروسافت برای پشتیبانی کامل از پایتون در VS Code
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">

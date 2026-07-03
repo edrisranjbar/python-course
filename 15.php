@@ -4,6 +4,55 @@ $description = 'مجموعه‌ها';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$exercises = [
+  [
+    'level' => null,
+    'desc'  => 'یک لیست بساز که چند عدد تکراری داشته باشد. سپس با استفاده از <code>set</code> تکراری‌ها را حذف کن و نتیجه را دوباره به لیست تبدیل و چاپ کن.',
+    'hint'  => '<span class="token-text">nums</span> = [<span class="token-number">1</span>, <span class="token-number">2</span>, <span class="token-number">2</span>, <span class="token-number">3</span>, <span class="token-number">4</span>, <span class="token-number">4</span>, <span class="token-number">5</span>]
+<span class="token-text">unique</span> = <span class="token-function">list</span>(<span class="token-function">set</span>(nums))
+<span class="token-function">print</span>(unique)',
+  ],
+  [
+    'level' => null,
+    'desc'  => 'دو set از نام دانش‌آموزان کلاس ریاضی و کلاس فیزیک بساز. سپس: الف) دانش‌آموزانی که در هر دو کلاس هستند را پیدا کن. ب) دانش‌آموزانی که فقط در کلاس ریاضی هستند را پیدا کن.',
+    'hint'  => '<span class="token-text">math</span> = {<span class="token-string">"علی"</span>, <span class="token-string">"سارا"</span>, <span class="token-string">"رضا"</span>, <span class="token-string">"مینا"</span>}
+<span class="token-text">physics</span> = {<span class="token-string">"سارا"</span>, <span class="token-string">"مینا"</span>, <span class="token-string">"حسن"</span>}
+
+<span class="token-function">print</span>(math &amp; physics)   <span class="token-comment"># اشتراک</span>
+<span class="token-function">print</span>(math - physics)   <span class="token-comment"># تفاضل</span>',
+  ],
+  [
+    'level' => 'hard',
+    'desc'  => 'یک رشته از کاربر بگیر و تعداد حروف <strong>یکتا</strong> آن را بشمار و چاپ کن. مثلاً برای کلمه <code>"python"</code> جواب ۶ است و برای <code>"mississippi"</code> جواب ۴.',
+    'hint'  => '<span class="token-text">word</span> = <span class="token-function">input</span>(<span class="token-string">"یک کلمه وارد کن: "</span>)
+<span class="token-text">unique_chars</span> = <span class="token-function">set</span>(word)
+<span class="token-function">print</span>(<span class="token-string">"تعداد حروف یکتا:"</span>, <span class="token-function">len</span>(unique_chars))',
+  ],
+];
+
+$references = [
+  [
+    'url'   => 'https://docs.python.org/3/library/stdtypes.php#set-types-set-frozenset',
+    'title' => 'مستندات رسمی پایتون — Set Types',
+    'desc'  => 'توضیح کامل تمام متدها و عملیات set در مستندات رسمی Python.org',
+  ],
+  [
+    'url'   => 'https://realpython.com/python-sets/',
+    'title' => 'Real Python — Sets in Python',
+    'desc'  => 'مقاله جامع انگلیسی درباره set با مثال‌های کاربردی و توضیح عملکرد داخلی',
+  ],
+  [
+    'url'   => 'https://www.w3schools.com/python/python_sets.asp',
+    'title' => 'W3Schools — Python Sets',
+    'desc'  => 'آموزش تعاملی set با امکان اجرای کد آنلاین مستقیم در مرورگر',
+  ],
+  [
+    'url'   => 'https://docs.python.org/3/library/stdtypes.php#frozenset',
+    'title' => 'مستندات رسمی — frozenset',
+    'desc'  => 'آشنایی با frozenset و تفاوت آن با set معمولی',
+  ],
+];
+
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
@@ -11,18 +60,13 @@ require $root . 'includes/nav.php';
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <!-- ─── MAIN CONTENT ─── -->
       <main class="lesson-main" data-lesson="15">
+
         <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>مجموعه‌ها (Set)</span>
-        </div>
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <!-- LESSON HEADER -->
         <div class="lesson-header">
-          <h1 class="lesson-title">مجموعه‌ها در پایتون (Set)</h1>
+          <h1 class="lesson-title">قسمت 15: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             در این جلسه با یکی از ساختارهای داده مهم پایتون آشنا می‌شیم:
             <strong>مجموعه یا Set</strong>. مجموعه‌ها مثل لیست‌اند با یک تفاوت
@@ -51,7 +95,6 @@ require $root . 'includes/nav.php';
           <!-- YOUTUBE -->
           <div class="video-player-wrap active" id="youtube-player">
             <div class="video-embed">
-              <!-- جایگزین کن: VIDEO_ID یوتیوب این جلسه -->
               <iframe
                 src="https://www.youtube.com/embed/rXycN0BCxz0?si=jAuBPWBSNYsUv4-G"
                 title="آموزش مجموعه‌ها در پایتون - جلسه ۱۵"
@@ -83,7 +126,6 @@ require $root . 'includes/nav.php';
           <!-- APARAT -->
           <div class="video-player-wrap" id="aparat-player">
             <div class="video-embed">
-              <!-- جایگزین کن: APARAT_HASH این جلسه -->
               <iframe
                 src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
                 title="آموزش مجموعه‌ها در پایتون - آپارات"
@@ -312,149 +354,10 @@ colors.<span class="token-function">clear</span>()</code></pre>
         </section>
 
         <!-- ─── EXERCISES ─── -->
-        <section class="lesson-section" id="exercises">
-          <div class="section-label">
-            <span class="section-label-icon">✏️</span>
-            تمرین‌ها
-          </div>
-
-          <div class="exercise-list">
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۱</div>
-              </div>
-              <p class="exercise-desc">
-                یک لیست بساز که چند عدد تکراری داشته باشد. سپس با استفاده از
-                <code>set</code> تکراری‌ها را حذف کن و نتیجه را دوباره به لیست
-                تبدیل و چاپ کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>💡 راهنمایی</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">nums</span> = [<span class="token-number">1</span>, <span class="token-number">2</span>, <span class="token-number">2</span>, <span class="token-number">3</span>, <span class="token-number">4</span>, <span class="token-number">4</span>, <span class="token-number">5</span>]
-<span class="token-text">unique</span> = <span class="token-function">list</span>(<span class="token-function">set</span>(nums))
-<span class="token-function">print</span>(unique)</code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۲</div>
-              </div>
-              <p class="exercise-desc">
-                دو set از نام دانش‌آموزان کلاس ریاضی و کلاس فیزیک بساز. سپس:
-                الف) دانش‌آموزانی که در هر دو کلاس هستند را پیدا کن. ب)
-                دانش‌آموزانی که فقط در کلاس ریاضی هستند را پیدا کن.
-              </p>
-              <details class="exercise-hint">
-                <summary>💡 راهنمایی</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">math</span> = {<span class="token-string">"علی"</span>, <span class="token-string">"سارا"</span>, <span class="token-string">"رضا"</span>, <span class="token-string">"مینا"</span>}
-<span class="token-text">physics</span> = {<span class="token-string">"سارا"</span>, <span class="token-string">"مینا"</span>, <span class="token-string">"حسن"</span>}
-
-<span class="token-function">print</span>(math &amp; physics)   <span class="token-comment"># اشتراک</span>
-<span class="token-function">print</span>(math - physics)   <span class="token-comment"># تفاضل</span></code></pre>
-                </div>
-              </details>
-            </div>
-
-            <div class="exercise-card">
-              <div class="exercise-header">
-                <div class="exercise-num">تمرین ۳</div>
-                <span class="exercise-level exercise-hard">چالشی</span>
-              </div>
-              <p class="exercise-desc">
-                یک رشته از کاربر بگیر و تعداد حروف <strong>یکتا</strong> آن را
-                بشمار و چاپ کن. مثلاً برای کلمه <code>"python"</code> جواب ۶ است
-                و برای <code>"mississippi"</code> جواب ۴.
-              </p>
-              <details class="exercise-hint">
-                <summary>💡 راهنمایی</summary>
-                <div class="hint-body">
-                  <pre><code><span class="token-text">word</span> = <span class="token-function">input</span>(<span class="token-string">"یک کلمه وارد کن: "</span>)
-<span class="token-text">unique_chars</span> = <span class="token-function">set</span>(word)
-<span class="token-function">print</span>(<span class="token-string">"تعداد حروف یکتا:"</span>, <span class="token-function">len</span>(unique_chars))</code></pre>
-                </div>
-              </details>
-            </div>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/exercises.php'; ?>
 
         <!-- ─── REFERENCES ─── -->
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://docs.python.org/3/library/stdtypes.php#set-types-set-frozenset"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی پایتون — Set Types</div>
-                <div class="ref-desc">
-                  توضیح کامل تمام متدها و عملیات set در مستندات رسمی Python.org
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://realpython.com/python-sets/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">Real Python — Sets in Python</div>
-                <div class="ref-desc">
-                  مقاله جامع انگلیسی درباره set با مثال‌های کاربردی و توضیح
-                  عملکرد داخلی
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://www.w3schools.com/python/python_sets.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python Sets</div>
-                <div class="ref-desc">
-                  آموزش تعاملی set با امکان اجرای کد آنلاین مستقیم در مرورگر
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://docs.python.org/3/library/stdtypes.php#frozenset"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی — frozenset</div>
-                <div class="ref-desc">
-                  آشنایی با frozenset و تفاوت آن با set معمولی
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">

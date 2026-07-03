@@ -4,22 +4,31 @@ $description = 'نوشتن کامنت';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$references = [
+  [
+    'url'   => 'https://www.w3schools.com/python/python_comments.asp',
+    'title' => 'W3Schools — Python Comments',
+    'desc'  => 'آموزش تعاملی و تمرین انواع روش‌های کامنت‌گذاری در پایتون',
+  ],
+  [
+    'url'   => 'https://peps.python.org/pep-0008/#comments',
+    'title' => 'PEP 8 — Style Guide for Python Code',
+    'desc'  => 'قوانین استاندارد جهانی (PEP 8) برای نوشتن کامنت‌های اصولی در پروژه‌ها',
+  ],
+];
+
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
 
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <main class="lesson-main" data-lesson="4">
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>نوشتن کامنت</span>
-        </div>
+
+        <!-- BREADCRUMB -->
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <div class="lesson-header">
-          <h1 class="lesson-title">قسمت ۴: نوشتن کامنت در کدهای پایتون</h1>
+          <h1 class="lesson-title">قسمت ۴: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             در این جلسه به سراغ یک مفهوم بسیار ساده اما فوق‌العاده مهم می‌رویم:
             کامنت‌گذاری (Commenting). مهارتی که تفاوت یک کدنویس مبتدی و یک
@@ -207,47 +216,8 @@ require $root . 'includes/nav.php';
           </div>
         </section>
 
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://www.w3schools.com/python/python_comments.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python Comments</div>
-                <div class="ref-desc">
-                  آموزش تعاملی و تمرین انواع روش‌های کامنت‌گذاری در پایتون
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://peps.python.org/pep-0008/#comments"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">PEP 8 — Style Guide for Python Code</div>
-                <div class="ref-desc">
-                  قوانین استاندارد جهانی (PEP 8) برای نوشتن کامنت‌های اصولی در
-                  پروژه‌ها
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <!-- ─── REFERENCES ─── -->
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <div class="lesson-nav-btns">
           <a href="3.php" class="lesson-nav-btn lesson-nav-prev">

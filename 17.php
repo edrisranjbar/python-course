@@ -76,17 +76,11 @@ require $root . 'includes/nav.php';
       <main class="lesson-main" data-lesson="17">
 
         <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>حلقه‌ها (Loops)</span>
-        </div>
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <!-- LESSON HEADER -->
         <div class="lesson-header">
-          <h1 class="lesson-title">حلقه‌ها (Loops)</h1>
+          <h1 class="lesson-title">قسمت 17: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             یکی از قدرتمندترین مفاهیم برنامه‌نویسی اینه که بتونی یه کار رو بارها تکرار کنی بدون اینکه کد رو دوباره بنویسی. <strong>حلقه‌ها</strong> دقیقاً همین کار رو می‌کنن. در این جلسه با دو نوع حلقه در پایتون آشنا می‌شیم و با ۳ مثال کاربردی یادشون می‌گیریم.
           </p>

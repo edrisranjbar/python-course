@@ -4,22 +4,31 @@ $description = 'تابع پرینت';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$references = [
+  [
+    'url'   => 'https://docs.python.org/3/library/functions.php#print',
+    'title' => 'مستندات رسمی پایتون — تابع print',
+    'desc'  => 'توضیح کامل تابع print و تمامی آرگومان‌های آن (مثل sep و end)',
+  ],
+  [
+    'url'   => 'https://www.w3schools.com/python/ref_func_print.asp',
+    'title' => 'W3Schools — Python print()',
+    'desc'  => 'آموزش تعاملی و تمرین‌های آنلاین برای یادگیری پارامترهای تابع پرینت',
+  ],
+];
+
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
 
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <main class="lesson-main" data-lesson="5">
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>تابع پرینت</span>
-        </div>
+
+        <!-- BREADCRUMB -->
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <div class="lesson-header">
-          <h1 class="lesson-title">قسمت ۵: بررسی عمیق‌تر تابع پرینت (print)</h1>
+          <h1 class="lesson-title">قسمت ۵: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             حالا که اولین برنامه خود را نوشته‌اید، وقت آن است که یکی از
             پرکاربردترین دستورات پایتون یعنی تابع <code>print</code> را به صورت
@@ -211,47 +220,8 @@ require $root . 'includes/nav.php';
           </div>
         </section>
 
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://docs.python.org/3/library/functions.php#print"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی پایتون — تابع print</div>
-                <div class="ref-desc">
-                  توضیح کامل تابع print و تمامی آرگومان‌های آن (مثل sep و end)
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://www.w3schools.com/python/ref_func_print.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python print()</div>
-                <div class="ref-desc">
-                  آموزش تعاملی و تمرین‌های آنلاین برای یادگیری پارامترهای تابع
-                  پرینت
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <!-- ─── REFERENCES ─── -->
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <div class="lesson-nav-btns">
           <a href="4.php" class="lesson-nav-btn lesson-nav-prev">

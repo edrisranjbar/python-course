@@ -4,6 +4,19 @@ $description = 'مقدمه';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$references = [
+  [
+    'url'   => 'https://docs.python.org/3/tutorial/introduction.php',
+    'title' => 'مستندات رسمی پایتون',
+    'desc'  => 'توضیح کامل متغیرها و انواع داده در مستندات رسمی Python.org',
+  ],
+  [
+    'url'   => 'https://www.w3schools.com/python/',
+    'title' => 'وب سایت W3Schools',
+    'desc'  => 'آموزش ساده و تعاملی با امکان اجرای کد آنلاین',
+  ],
+];
+
 require_once $root . 'includes/head.php';
 require_once $root . 'includes/nav.php';
 ?>
@@ -12,18 +25,13 @@ require_once $root . 'includes/nav.php';
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <!-- ─── MAIN CONTENT ─── -->
       <main class="lesson-main">
+
         <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>مقدمه</span>
-        </div>
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <!-- LESSON HEADER -->
         <div class="lesson-header">
-          <h1 class="lesson-title">قسمت ۱: مقدمه</h1>
+          <h1 class="lesson-title">قسمت ۱: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             سلام! من <strong>ادریس رنجبر</strong> هستم و به قسمت اول از دوره
             جامع «آموزش پایتون از صفر» خوش آمدید. این دوره کاملاً کاربردی، عملی
@@ -84,8 +92,12 @@ require_once $root . 'includes/nav.php';
           <!-- APARAT -->
           <div class="video-player-wrap" id="aparat-player">
             <div class="video-embed">
-                <iframe src="https://www.aparat.com/video/video/embed/videohash/hzhs404/vt/frame"     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-                </iframe width="100%">
+              <iframe
+                src="https://www.aparat.com/video/video/embed/videohash/hzhs404/vt/frame"
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+              ></iframe>
             </div>
             <div class="video-caption">
               🎥 برای تماشا در آپارات:
@@ -235,55 +247,11 @@ require_once $root . 'includes/nav.php';
                 </li>
               </ul>
             </section>
-
-            <p>
-              متغیر مثل یه جعبه‌ست که می‌تونی یه مقدار توش بذاری و بعداً ازش
-              استفاده کنی. در پایتون نیازی به تعریف نوع متغیر نداری — پایتون
-              خودش می‌فهمه.
-            </p>
-
+          </div>
         </section>
 
         <!-- ─── REFERENCES ─── -->
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://docs.python.org/3/tutorial/introduction.php"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی پایتون</div>
-                <div class="ref-desc">
-                  توضیح کامل متغیرها و انواع داده در مستندات رسمی Python.org
-                </div>
-              </div>
-            </a>
-            <a
-              href="https://www.w3schools.com/python/"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">وب سایت W3Schools</div>
-                <div class="ref-desc">
-                  آموزش ساده و تعاملی با امکان اجرای کد آنلاین
-                </div>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <div id="pos-article-display-119894"></div>
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">
@@ -294,12 +262,12 @@ require_once $root . 'includes/nav.php';
               <div class="nav-btn-title">—</div>
             </div>
           </a>
-          <a href="#" class="lesson-nav-btn lesson-nav-next">
-            <span>&RightAngleBracket;</span>
+          <a href="2.php" class="lesson-nav-btn lesson-nav-next">
             <div style="text-align: right">
               <div class="nav-btn-label">جلسه بعد</div>
-              <div class="nav-btn-title">انواع داده</div>
+              <div class="nav-btn-title">راه‌اندازی پیش‌نیازها</div>
             </div>
+            <span>&RightAngleBracket;</span>
           </a>
         </div>
       </main>

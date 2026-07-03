@@ -4,25 +4,38 @@ $description = 'نوشتن و اجرای اولین برنامه';
 $extraCss    = 'assets/css/lesson.css';
 $extraJs     = 'assets/js/lesson.js';
 
+$references = [
+  [
+    'url'   => 'https://docs.python.org/3/library/functions.php#print',
+    'title' => 'مستندات رسمی پایتون — تابع print',
+    'desc'  => 'توضیح کامل تابع print و تمام پارامترهای آن در Python.org',
+  ],
+  [
+    'url'   => 'https://code.visualstudio.com/docs/python/python-tutorial',
+    'title' => 'VS Code — راهنمای شروع با پایتون',
+    'desc'  => 'آموزش رسمی VS Code برای راه‌اندازی و اجرای پروژه‌های پایتون',
+  ],
+  [
+    'url'   => 'https://www.w3schools.com/python/ref_func_print.asp',
+    'title' => 'W3Schools — Python print()',
+    'desc'  => 'آموزش تعاملی تابع print با مثال‌های ساده و قابل اجرا در مرورگر',
+  ],
+];
+
 require $root . 'includes/head.php';
 require $root . 'includes/nav.php';
 ?>
     <!-- ─── LESSON LAYOUT ─── -->
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <main class="lesson-main" data-lesson="3">
+
         <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>نوشتن و اجرای اولین برنامه</span>
-        </div>
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <!-- LESSON HEADER -->
         <div class="lesson-header">
           <h1 class="lesson-title">
-            قسمت ۳: نوشتن و اجرای اولین برنامه پایتون
+            قسمت ۳: <?php echo $description; ?>
           </h1>
           <p class="lesson-lead">
             پس از نصب و راه‌اندازی پیش‌نیازها، حالا زمان آن رسیده که آستین‌ها را
@@ -229,62 +242,7 @@ require $root . 'includes/nav.php';
         </section>
 
         <!-- ─── REFERENCES ─── -->
-        <section class="lesson-section" id="references">
-          <div class="section-label">
-            <span class="section-label-icon">📎</span>
-            منابع و مطالعه بیشتر
-          </div>
-
-          <div class="reference-list">
-            <a
-              href="https://docs.python.org/3/library/functions.php#print"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">مستندات رسمی پایتون — تابع print</div>
-                <div class="ref-desc">
-                  توضیح کامل تابع print و تمام پارامترهای آن در Python.org
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://code.visualstudio.com/docs/python/python-tutorial"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">VS Code — راهنمای شروع با پایتون</div>
-                <div class="ref-desc">
-                  آموزش رسمی VS Code برای راه‌اندازی و اجرای پروژه‌های پایتون
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-
-            <a
-              href="https://www.w3schools.com/python/ref_func_print.asp"
-              target="_blank"
-              rel="noopener"
-              class="reference-card"
-            >
-              <div class="ref-icon ref-icon-blue">🌐</div>
-              <div class="ref-body">
-                <div class="ref-title">W3Schools — Python print()</div>
-                <div class="ref-desc">
-                  آموزش تعاملی تابع print با مثال‌های ساده و قابل اجرا در مرورگر
-                </div>
-              </div>
-              <span class="ref-arrow">↗</span>
-            </a>
-          </div>
-        </section>
+        <?php require_once $root . 'includes/references.php'; ?>
 
         <!-- ─── NAVIGATION ─── -->
         <div class="lesson-nav-btns">

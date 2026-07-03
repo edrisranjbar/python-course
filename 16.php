@@ -73,18 +73,13 @@ require $root . 'includes/nav.php';
     <div class="lesson-layout" style="position: relative; z-index: 1">
       <!-- ─── MAIN CONTENT ─── -->
       <main class="lesson-main" data-lesson="16">
+
         <!-- BREADCRUMB -->
-        <div class="breadcrumb">
-          <a href="index.php">خانه</a>
-          <span class="bc-sep">›</span>
-          <a href="index.php#curriculum">فصل ۱</a>
-          <span class="bc-sep">›</span>
-          <span>دیکشنری (Dictionary)</span>
-        </div>
+        <?php require_once($root . 'includes/breadcrumb.php'); ?>
 
         <!-- LESSON HEADER -->
         <div class="lesson-header">
-          <h1 class="lesson-title">دیکشنری در پایتون (Dictionary)</h1>
+          <h1 class="lesson-title">قسمت 16: <?php echo $description; ?></h1>
           <p class="lesson-lead">
             دیکشنری یکی از پرکاربردترین ساختارهای داده در پایتونه. به جای ذخیره
             مقادیر با ایندکس عددی، در دیکشنری هر مقدار یک
