@@ -94,7 +94,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap" id="aparat-player">
             <div class="video-embed">
               <iframe
-                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
+                src="https://www.aparat.com/video/video/embed/videohash/fqnmcxo/vt/frame"
                 title="آموزش پایتون - قسمت ۲: راه‌اندازی پیش‌نیازها"
                 frameborder="0"
                 allowfullscreen
@@ -103,7 +103,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               🎥 برای تماشا در آپارات:
               <a
-                href="https://aparat.com/v/APARAT_HASH"
+                href="https://www.aparat.com/v/fqnmcxo"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در آپارات ↗</a

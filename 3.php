@@ -95,7 +95,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap" id="aparat-player">
             <div class="video-embed">
               <iframe
-                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
+                src="https://www.aparat.com/video/video/embed/videohash/skfhwcx/vt/frame"
                 title="آموزش پایتون - قسمت ۳: نوشتن و اجرای اولین برنامه"
                 frameborder="0"
                 allowfullscreen
@@ -104,7 +104,7 @@ require $root . 'includes/nav.php';
             <div class="video-caption">
               🎥 برای تماشا در آپارات:
               <a
-                href="https://aparat.com/v/APARAT_HASH"
+                href="https://www.aparat.com/v/skfhwcx"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در آپارات ↗</a

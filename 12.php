@@ -99,7 +99,7 @@ require $root . 'includes/nav.php';
           <div class="video-player-wrap" id="aparat-player">
             <div class="video-embed">
               <iframe
-                src="https://www.aparat.com/video/video/embed/videohash/APARAT_HASH/vt/frame"
+                src="https://www.aparat.com/video/video/embed/videohash/gwu7fdi/vt/frame"
                 title="آموزش فرمت کردن رشته‌ها در پایتون - آپارات"
                 frameborder="0"
                 allowfullscreen
@@ -107,7 +107,7 @@ require $root . 'includes/nav.php';
             </div>
             <div class="video-caption">
               🎥 برای تماشا در آپارات:
-              <a href="https://aparat.com/v/APARAT_HASH" target="_blank" rel="noopener">باز کردن در آپارات ↗</a>
+              <a href="https://aparat.com/v/gwu7fdi" target="_blank" rel="noopener">باز کردن در آپارات ↗</a>
             </div>
           </div>
         </section>

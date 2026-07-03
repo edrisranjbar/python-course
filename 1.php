@@ -102,7 +102,7 @@ require_once $root . 'includes/nav.php';
             <div class="video-caption">
               🎥 برای تماشا در آپارات:
               <a
-                href="https://aparat.com/v/APARAT_HASH"
+                href="https://aparat.com/v/hzhs404"
                 target="_blank"
                 rel="noopener"
                 >باز کردن در آپارات ↗</a
