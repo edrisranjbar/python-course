@@ -15,7 +15,7 @@ const LESSONS = [
   { id: 14, file: "14.php", title: "تاپل‌ها" },
   { id: 15, file: "15.php", title: "مجموعه‌ها" },
   { id: 16, file: "16.php", title: "دیکشنری" },
-  { id: 16, file: "17.php", title: "حلقه‌ها" },
+  { id: 17, file: "17.php", title: "حلقه‌ها" },
 ];
 
 // ─── VIDEO TABS ───
