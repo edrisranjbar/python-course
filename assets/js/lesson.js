@@ -19,6 +19,7 @@ const LESSONS = [
   { id: 18, file: "18.php", title: "دستورات شرطی" },
   { id: 19, file: "19.php", title: "توابع" },
   { id: 20, file: "20.php", title: "کار با فایل‌ها" },
+  { id: 21, file: "21.php", title: "پروژه مدیریت مخاطبین" },
 ];
 
 // ─── VIDEO TABS ───
