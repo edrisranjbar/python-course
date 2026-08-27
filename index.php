@@ -391,6 +391,26 @@
                   <span class="lesson-icon">▶</span>حلقه‌ها
                 </div>
               </a>
+              <a href="18.php">
+                <div class="lesson-item no-border">
+                  <span class="lesson-icon">▶</span>دستورات شرطی
+                </div>
+              </a>
+              <a href="19.php">
+                <div class="lesson-item no-border">
+                  <span class="lesson-icon">▶</span>توابع
+                </div>
+              </a>
+              <a href="20.php">
+                <div class="lesson-item no-border">
+                  <span class="lesson-icon">▶</span>کار با فایل‌ها
+                </div>
+              </a>
+              <a href="21.php">
+                <div class="lesson-item no-border">
+                  <span class="lesson-icon">▶</span>پروژه مدیریت مخاطبین
+                </div>
+              </a>
             </div>
           </div>
 
